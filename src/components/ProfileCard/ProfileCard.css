@@ -1,14 +1,15 @@
 #home {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 250px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 50px;
-  margin: 50px;
+  margin: 10px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
   border-radius: 2rem;
 }
+
+
 
 #name-text {
   color: #eaeaea;
@@ -38,6 +39,7 @@
 
 .profile-picture {
   height: 190px;
+  width: 190px;
   border-radius: 50%;
   margin-bottom: 20px;
 }

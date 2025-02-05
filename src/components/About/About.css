@@ -1,14 +1,8 @@
 #about-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   margin: 10px;
 }
 
 #about {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   padding: 20px;
 }
 

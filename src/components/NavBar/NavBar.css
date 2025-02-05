@@ -9,27 +9,27 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background: #2a2a2a57;
-  border: solid 1px #cfcfed31;
+  border: solid 1px #b2b2b231;
   border-radius: 20px;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
   box-shadow: 0 8px 32px 10px #0000007e;
   z-index: 1;
 }
 .nav {
   display: flex;
   justify-content: space-around;
-  align-self: end;
+
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   text-decoration: none;
-  color: #cfcfed;
+  color: #cfcfcf;
   margin-right: 10px;
   margin-left: 10px;
 } 
 
 a:visited {
-  color: #cfcfed;;
+  color: #cfcfcf;;
 }
 a:hover {
   color: #5bc3fb;

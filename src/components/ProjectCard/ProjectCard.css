@@ -1,5 +1,6 @@
 .project-card {
   display: flex;
+
   align-items: center;
   justify-content: space-evenly;
   flex-flow: column wrap;
