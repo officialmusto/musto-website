@@ -1,0 +1,100 @@
+#home {
+  scroll-margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  margin: 50px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+  border-radius: 2rem;
+}
+
+#name-text {
+  color: #eaeaea;
+  font-size: 1.7rem;
+  font-family: "avenir-next-bold";
+  font-weight: bold; 
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.name-text-statment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brand-statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  letter-spacing: 2px;
+  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
+  font-size: .85rem;
+  color: #eaeaea;
+}
+
+.profile-picture {
+  height: 190px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: #9596de;
+  gap: 20px;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #a6a7ee;
+}
+
+a:visited {
+  color: #a6a7ee;
+}
+
+a:hover {
+  color: #ebeaec;
+}
+
+#github-link {
+  
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+#email-link {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+#linkedin-link {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+@media (max-width: 500px) {
+  #home {
+    width: 350px;
+  }
+  .links {
+    flex-direction: column;
+  }
+
+  #brand-statement {
+    font-size: .8rem;
+  }
+}

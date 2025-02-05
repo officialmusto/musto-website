@@ -1,0 +1,77 @@
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, rgba(34, 11, 40, 0.316), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);  border-radius: 1.2rem;
+}
+
+#title {
+  font-family: "avenir-next-regular", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #eaeaea;
+}
+
+#thumbnail {
+  border: none;
+  box-shadow: 0 8px 60px 0 #0d0d10;
+  border-radius: 2.4%;
+  max-height: 120px;
+}
+
+#desc {
+  font-family: "avenir-next-light", Arial, Helvetica;
+  font-size: .7rem;
+  color: #eaeaea;
+  word-spacing: 1px;
+  line-height: 1rem;
+  margin: 14px;
+  padding: 0px;
+  text-align: center;
+}
+
+.project-links {
+  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  color: #9596de;
+  margin: 8px;
+  gap: 40px;
+}
+
+.github-link {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.deployed-link {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+.badges {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+#badge {
+  max-height: 20px;
+}
