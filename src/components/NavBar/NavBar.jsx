@@ -16,14 +16,14 @@ import donoIcon from '../../assets/icons/dono.png'
 // CSS
 import '../NavBar/NavBar.css'
 
+// Make sure to wrap the button and the drawer in a container.
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const menuRef = useRef(null) // Reference for the menu
-  const menuButtonRef = useRef(null) // Reference for the button
+  const menuRef = useRef(null)
+  const menuButtonRef = useRef(null)
 
   useEffect(() => {
     function handleClickOutside(event) {
-      // If the click is NOT on the menu or button, close the menu
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target) &&
@@ -33,63 +33,61 @@ function NavBar() {
         setMenuOpen(false)
       }
     }
-
     if (menuOpen) {
       document.addEventListener('mousedown', handleClickOutside)
     }
-
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [menuOpen])
 
   return (
-    <>
+    <div className="menu-container">
       {/* Mobile Menu Button */}
       <button
         ref={menuButtonRef}
         className={`menu-button ${menuOpen ? 'active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />{' '}
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </button>
 
-      {/* Navigation Menu */}
+      {/* Navigation Drawer */}
       <div ref={menuRef} id="nav-el" className={menuOpen ? 'expanded' : ''}>
         <nav className="nav">
           <div className="nav-item">
             <HashLink smooth to="/widgets">
-            <img src={widgetsIcon} className="icon" alt="Widgets" />
+              <img src={widgetsIcon} className="icon" alt="Widgets" />
               widgets
             </HashLink>
           </div>
           <div className="nav-item">
             <HashLink smooth to="/">
-            <img src={docsIcon} className="icon" alt="Docs" />
+              <img src={docsIcon} className="icon" alt="Docs" />
               docs
             </HashLink>
           </div>
           <div className="nav-item">
             <HashLink smooth to="/">
-            <img src={homeIcon} className="icon" alt="Home" />
+              <img src={homeIcon} className="icon" alt="Home" />
               home
             </HashLink>
           </div>
           <div className="nav-item">
             <HashLink smooth to="/">
-            <img src={commIcon} className="icon" alt="Community" />
+              <img src={commIcon} className="icon" alt="Community" />
               community
             </HashLink>
           </div>
           <div className="nav-item">
             <HashLink smooth to="/donate">
-            <img src={donoIcon} className="icon" alt="Donations" />
+              <img src={donoIcon} className="icon" alt="Donations" />
               donations
             </HashLink>
           </div>
         </nav>
       </div>
-    </>
+    </div>
   )
 }
 

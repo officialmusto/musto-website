@@ -1,5 +1,6 @@
-/* Desktop styles remain unchanged … */
-
+/* ============================= */
+/* Desktop Styles */
+/* ============================= */
 #nav-el {
   position: fixed;
   top: 20px;
@@ -57,13 +58,66 @@ a:hover {
   color: #b4d6fd;
 }
 
+
 /* ============================= */
 /* Mobile Styles */
 /* ============================= */
 @media (max-width: 650px) {
-  /* Hide the full desktop nav in mobile */
+
+  .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-button {
+    position: fixed;
+    top: 120px; 
+    right: 20px;
+    z-index: 1001;
+    padding: 10px 14px 5px 14px;
+    font-size: 32px;
+    background: #2a2a2a57;
+    border: solid 1px #b2b2b231;
+    border-radius: 10px;
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    box-shadow: 0 8px 32px 10px #0000007e;
+    color: rgb(217, 217, 217);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-button.active {
+    transform: rotate(-90deg);
+    background: #d5d5d557;
+  }
+
+
+  #nav-el {
+    position: fixed;
+    top: 120px;
+    right: -405px;
+    height: auto;
+    width: 200px; 
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
+    background: #2a2a2a57;
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+    transform-origin: top right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  #nav-el.expanded {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  /* Inner nav styles remain similar */
   .nav {
-    /* These styles define the inner nav once #nav-el expands */
     height: 100%;
     padding: 30px;
     display: flex;
@@ -78,64 +132,5 @@ a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
-
-
-  #nav-el {
-    position: fixed;
-    top: 11%; 
-    right: 4%; 
-    height: 65%;
-    width: 50%;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    
-    /* Initial state: scaled down, slightly shifted and transparent */
-    opacity: 0;
-    transform: scale(0) translateY(20px);
-    transform-origin: top right;
-    transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease, right 0.3s ease;
-  }
-
-
-  #nav-el.expanded {
-    top: 17.5%;
-    right: -42%;
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-
-
-  .menu-button {
-    padding: 10px 14px 5px 14px;
-    display: block;
-    position: fixed;
-    top: 11%;
-    right: 4%;
-    font-size: 32px;
-    background: #2a2a2a57;
-    border: solid 1px #b2b2b231;
-    border-radius: 10px;
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17px);
-    box-shadow: 0 8px 32px 10px #0000007e;
-    color: rgb(217, 217, 217);
-    cursor: pointer;
-    z-index: 1001;
-    transition: transform 0.3s ease-in-out;
-  }
-
-
-  .menu-button.expanded {
-    display: none;
-  }
-
-  .menu-button.active {
-    transform: rotate(-90deg);
-    background: #d5d5d557;
   }
 }
