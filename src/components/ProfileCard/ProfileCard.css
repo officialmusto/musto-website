@@ -2,7 +2,8 @@
   width: 90%;
   display: flex;
   justify-content: center;
-
+  padding-top: 45px;
+  padding-bottom: 45px;
   gap: 20px;
   scroll-margin-top: 230px;
   align-items: center;
@@ -15,13 +16,10 @@
 }
 
 #name-text {
-  
-  color: #eaeaea;
-  font-size: 1.7rem;
-  font-family: "avenir-next-bold";
-  font-weight: bold; 
+  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-size: 160%;
   text-align: center;
-  letter-spacing: 2px;
+  color: #e2e2e2;
 }
 
 .name-text-statment {
