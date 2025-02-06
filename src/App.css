@@ -84,6 +84,7 @@ body {
 
 .profile-and-about {
   gap: 20px;
+  width: 90%;
   display: flex;
   flex-direction: row;
 }
@@ -91,6 +92,7 @@ body {
 
 .projects-and-resume {
   display: flex;
+  width: 90%;
   align-self: center;
   flex-direction: column;
   justify-content: center;

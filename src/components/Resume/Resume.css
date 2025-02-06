@@ -1,17 +1,17 @@
 #resume {
   scroll-margin-top: 240px;
+  width: 90%;
   gap: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
   align-self: center;
   background: #7575753a;
   backdrop-filter: blur(10px);
   border: solid 1px #dedede3f;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 26px;
-  padding: 20px;
+  padding: 40px;
   margin-bottom: 450px;
 }
 
@@ -25,15 +25,15 @@
 
 .download-link {
   
-  color: #a6a7ee;
+  color: #8486ff;
   font-size: 1.4rem;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   z-index: 0;
 }
 
 .resume-pages {
-  
   display: flex;
+  
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -42,9 +42,8 @@
 
 #resume-1, #resume-2 {
   
-  margin: 20px;
-  height: 100%;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+  height: 250px;
+  box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 2.4%;
 }
 
@@ -79,22 +78,24 @@
 
   #resume-1, #resume-2 {
     margin: 20px;
-    height: 400px;
+    height: 250px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
     border-radius: 2.4%;
   }
-
-
 }
-@media (max-width: 550px) {
+
+@media (max-width: 860px) {
   #resume {
     flex-direction: column;
   }
+  
+}
+@media (max-width: 550px) {
 
   #resume-1, #resume-2 {
     margin: 20px;
     height: 250px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+    box-shadow: 0 8px 32px 0 #00000096;
     border-radius: 2.4%;
     flex-direction: column;
   }
