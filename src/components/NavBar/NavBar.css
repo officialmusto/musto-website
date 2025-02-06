@@ -56,8 +56,12 @@ a:hover {
   color: #b4d6fd;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+
+  .nav-el {
+    
+  }
   .nav {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

@@ -16,7 +16,7 @@
   backdrop-filter: blur(10px);
   border: solid 1px #dedede3f;
   box-shadow: 0 8px 32px 0 #00000096;
-  border-radius: 1.5rem;
+  border-radius: 33px;
 }
 
 #about-title {
