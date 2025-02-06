@@ -54,11 +54,25 @@ body {
 }
 
 .banner-div {
+  position: relative;
+  width: 100vw;
   height: 650px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  box-shadow: inset 0 0 10px 55px;
+  align-items: center;
 }
+
+.banner-div video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .profile-and-about {
   margin: 5%
