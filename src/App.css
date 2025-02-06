@@ -83,7 +83,6 @@ body {
 }
 
 .profile-and-about {
-  width: 90%;
   gap: 20px;
   display: flex;
   flex-direction: row;

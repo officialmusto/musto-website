@@ -1,9 +1,9 @@
 #home {
-  width: 98%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
   gap: 20px;
   scroll-margin-top: 230px;
-  display: flex;
-  align-self: center;
   align-items: center;
   flex-direction: column;
   padding: 50px;
@@ -14,9 +14,8 @@
   border-radius: 2rem;
 }
 
-
-
 #name-text {
+  
   color: #eaeaea;
   font-size: 1.7rem;
   font-family: "avenir-next-bold";
@@ -44,6 +43,7 @@
 }
 
 .profile-picture {
+
   height: 190px;
   width: 190px;
   border-radius: 50%;
