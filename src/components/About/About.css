@@ -35,6 +35,7 @@
 
 .connect-link-div {
   padding: 20px;
+  display: flex;
   justify-content: center;
   color: #b4d6fd;
 }
