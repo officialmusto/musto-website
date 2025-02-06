@@ -4,6 +4,14 @@
   justify-content: center;
   align-content: center;
   align-self: center;
+  background: #7575753a;
+  border: solid 1px #b2b2b231;
+  border-radius: 20px;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  box-shadow: 0 8px 32px 10px #0000007e;
+  border-radius: 26px;
+  padding: 20px;
 }
 
 .resume-text-link {

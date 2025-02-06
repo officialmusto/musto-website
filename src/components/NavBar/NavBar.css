@@ -19,10 +19,8 @@
 .nav {
   display: flex;
   justify-content: space-around;
-
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  text-decoration: none;
   color: #cfcfcf;
   margin-right: 10px;
   margin-left: 10px;
