@@ -41,7 +41,6 @@
 .nav-item {
   gap: 10px;
   display: flex;
-
 }
 
 a:visited {
@@ -62,17 +61,17 @@ a:hover {
   }
   #nav-el {
     position: fixed;
-    top: 11%;
+    top: 17.5%;
     right: -42%;
     height: 65%;
     width: 50%;
-
+    
     border-radius: 15px;
     box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out, slide 1.5s ease-in-out ;
+    transition: opacity 0.3s ease-in-out, slide 1.5s ease-in-out;
     display: flex;
     justify-content: center;
   }
@@ -81,6 +80,7 @@ a:hover {
     height: 100%;
     padding: 30px;
     display: flex;
+    
     justify-content: space-around;
     flex-direction: column;
     align-items: flex-start;
@@ -98,11 +98,10 @@ a:hover {
     justify-content: center;
     text-align: center;
   }
-  
+
   .menu-button.expanded {
     display: none;
   }
-  
 
   .menu-button {
     padding-top: 10px;
@@ -111,7 +110,7 @@ a:hover {
     padding-right: 14px;
     display: block;
     position: fixed;
-    top: 100px;
+    top: 11%;
     right: 4%;
     font-size: 32px;
     background: #2a2a2a57;
@@ -125,12 +124,9 @@ a:hover {
     z-index: 1001;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .menu-button.active {
     transform: rotate(-90deg);
     background: #d5d5d557;
   }
-
-
-
 }
