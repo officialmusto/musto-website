@@ -39,7 +39,7 @@
 #title {
   padding: 10px;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
+  font-size: 160%;
   text-align: center;
   color: #e2e2e2;
 }
@@ -48,7 +48,7 @@
   height: 100%;
   width: 60%;
   font-family: "avenir-next-regular", Arial, Helvetica;
-  font-size: .9rem;
+  font-size: 80%;
   color: #262626;
   text-align: center;
   display: flex;
@@ -94,4 +94,11 @@
 
 #badge {
   max-height: 20px;
+}
+
+
+@media (max-width: 850px) {
+  .project-links {
+    flex-direction: row;
+  }
 }
