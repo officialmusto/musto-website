@@ -37,7 +37,8 @@
   100% { background-position: 100%; }
 }
 /* ---------------------------------------- */
-html, * {
+*, html {
+  width: auto;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -47,9 +48,8 @@ html, * {
 }
 
 body {
-  background-color: #1b1b1b;
-  background-image: linear-gradient(45deg, #463030, #4a465b, #4d5c5b, #534658, #275157);
-  background-size: 200%;
+  
+  background-color: #242424;
   animation: gradientAnimation 10s ease infinite;
   
 }
@@ -63,30 +63,28 @@ body {
 .profile-and-about {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
-
+  justify-content: center;
 }
 
 
 .projects-and-resume {
   display: flex;
   flex-direction: column;
-  margin: 50px;
 }
 
 /* ---------------------------------------- */
 
-@media (max-width: 1250px) {
-  .about-child {
-    flex-direction: column;
+@media (max-width: 1300px) {
+  .all-el{
+    justify-content: center;
   }
-}
 
-
-@media (max-width: 500px) {
   .profile-and-about {
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
-
 }
+
+
