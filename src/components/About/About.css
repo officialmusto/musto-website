@@ -22,13 +22,13 @@
 #about-title {
   padding: 20px;
   font-size: 1.5rem;
-  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   color: #dedede;
 }
 
 #about-text {
   padding: 3%;
-  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   color: #dedede;
 }
@@ -40,8 +40,7 @@
 }
 
 a {
-  
-  color: #b4d6fd ;
+  color: #b4d6fd;
 }
 
 a:hover {
@@ -49,18 +48,16 @@ a:hover {
 }
 
 #connect-link {
-  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #dedede;
   max-width: 100px;
-  
 }
-
 
 @media (max-width: 850px) {
   #about-text {
     padding: 3%;
-    font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+    font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: #dedede;
   }
