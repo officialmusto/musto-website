@@ -58,18 +58,20 @@ a:hover {
   color: #b4d6fd;
 }
 
+.menu-button {
+  display: none;
+}
+
+
+
 
 /* ============================= */
 /* Mobile Styles */
 /* ============================= */
 @media (max-width: 650px) {
 
-  .menu-container {
-    position: relative;
-    display: inline-block;
-  }
-
   .menu-button {
+    display: block;
     position: fixed;
     top: 120px; 
     right: 20px;
