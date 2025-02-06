@@ -54,20 +54,9 @@
 }
 
 #resume-1:hover, #resume-2:hover {
-  
-  animation: growAnimation 0.354s ease;
+  transform: scale(1.2);
+  transition: transform 0.35s ease-in-out;
 }
-
-@keyframes growAnimation {
-  from {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-
 /* -------------------------- */
 
 @media (max-width: 1100px) {
