@@ -1,3 +1,5 @@
+/* Desktop styles remain unchanged … */
+
 #nav-el {
   position: fixed;
   top: 20px;
@@ -15,7 +17,6 @@
   z-index: 10;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
 }
 
 .nav {
@@ -43,9 +44,15 @@
   display: flex;
 }
 
+a {
+  display: flex;
+  gap: 10px;
+}
+
 a:visited {
   color: #b4d6fd;
 }
+
 a:hover {
   color: #b4d6fd;
 }
@@ -53,44 +60,18 @@ a:hover {
 /* ============================= */
 /* Mobile Styles */
 /* ============================= */
-
 @media (max-width: 650px) {
-  /* Hide normal navbar */
+  /* Hide the full desktop nav in mobile */
   .nav {
-    display: none;
-  }
-  #nav-el {
-    position: fixed;
-    top: 17.5%;
-    right: -42%;
-    height: 65%;
-    width: 50%;
-    
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, slide 1.5s ease-in-out;
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav {
+    /* These styles define the inner nav once #nav-el expands */
     height: 100%;
     padding: 30px;
     display: flex;
-    
     justify-content: space-around;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    gap: 20px; /* Space between items */
-  }
-
-  #nav-el.expanded {
-    right: -42%;
-    opacity: 1;
+    gap: 20px;
   }
 
   .nav-item {
@@ -99,15 +80,38 @@ a:hover {
     text-align: center;
   }
 
-  .menu-button.expanded {
-    display: none;
+
+  #nav-el {
+    position: fixed;
+    top: 11%; 
+    right: 4%; 
+    height: 65%;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    /* Initial state: scaled down, slightly shifted and transparent */
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+    transform-origin: top right;
+    transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease, right 0.3s ease;
   }
 
+
+  #nav-el.expanded {
+    top: 17.5%;
+    right: -42%;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+
   .menu-button {
-    padding-top: 10px;
-    padding-bottom: 5px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding: 10px 14px 5px 14px;
     display: block;
     position: fixed;
     top: 11%;
@@ -123,6 +127,11 @@ a:hover {
     cursor: pointer;
     z-index: 1001;
     transition: transform 0.3s ease-in-out;
+  }
+
+
+  .menu-button.expanded {
+    display: none;
   }
 
   .menu-button.active {

@@ -58,32 +58,32 @@ function NavBar() {
       <div ref={menuRef} id="nav-el" className={menuOpen ? 'expanded' : ''}>
         <nav className="nav">
           <div className="nav-item">
-            <img src={widgetsIcon} className="icon" alt="Widgets" />
             <HashLink smooth to="/widgets">
+            <img src={widgetsIcon} className="icon" alt="Widgets" />
               widgets
             </HashLink>
           </div>
           <div className="nav-item">
-            <img src={docsIcon} className="icon" alt="Docs" />
             <HashLink smooth to="/">
+            <img src={docsIcon} className="icon" alt="Docs" />
               docs
             </HashLink>
           </div>
           <div className="nav-item">
-            <img src={homeIcon} className="icon" alt="Home" />
             <HashLink smooth to="/">
+            <img src={homeIcon} className="icon" alt="Home" />
               home
             </HashLink>
           </div>
           <div className="nav-item">
-            <img src={commIcon} className="icon" alt="Community" />
             <HashLink smooth to="/">
+            <img src={commIcon} className="icon" alt="Community" />
               community
             </HashLink>
           </div>
           <div className="nav-item">
-            <img src={donoIcon} className="icon" alt="Donations" />
             <HashLink smooth to="/donate">
+            <img src={donoIcon} className="icon" alt="Donations" />
               donations
             </HashLink>
           </div>
