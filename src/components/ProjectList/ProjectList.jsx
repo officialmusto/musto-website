@@ -32,7 +32,7 @@ function ProjectList() {
         },
       ],
       thumbnail: hhThumbnail,
-      desc: "Habit-Hero is a full-stack web app built with TypeScript, PostgreSQL, Express, Node.js, React, and JWT, offering a sleek interface with CSS styling and seamless error handling. It ensures maintainable code through TypeScript and dynamic UI updates via React’s useState and useEffect hooks.",
+      desc: "Habit-Hero is a full-stack TypeScript web app with PostgreSQL, Express, Node.js, React, and JWT, featuring dynamic UI updates and seamless error handling.",
       badges: [
         jsIcon,
         htmlIcon,
@@ -56,7 +56,7 @@ function ProjectList() {
         },
       ],
       thumbnail: ssThumbnail,
-      desc: "StyleSwipe is a collaborative MERN stack social media app with JWT authentication, built in two days with a mobile-first design using Styled-Components and CSS. It offers full CRUD functionality and RESTful API integration, highlighting efficient teamwork and rapid development.",
+      desc: "StyleSwipe is a MERN stack social media app with JWT authentication, built in two days with a mobile-first design, full CRUD, and RESTful API integration.",
       badges: [
         jsIcon,
         htmlIcon,
@@ -77,7 +77,7 @@ function ProjectList() {
         },
       ],
       thumbnail: sbThumbnail,
-      desc: "Smash Bros. Reviews is a web app built with Node.js, Express, and MongoDB, featuring Google OAuth for authentication and Mongoose-powered CRUD operations. It dynamically renders EJS templates for character pages, reviews, and user management.",
+      desc: "Smash Bros. Reviews is a Node.js web app with Express, MongoDB, Google OAuth, and Mongoose-powered CRUD, dynamically rendering EJS templates.",
       badges: [jsIcon, htmlIcon, cssIcon, gitIcon, mongoDbIcon, nodejsIcon],
     },
     {
@@ -89,7 +89,7 @@ function ProjectList() {
         },
       ],
       thumbnail: bjThumbnail,
-      desc: "BlackJack 21 is a captivating web application showcasing strong problem-solving and algorithmic skills, implemented with JavaScript, HTML, and CSS, featuring immersive game logic, modular classes, and effective handling of edge cases for an engaging and realistic gaming experience.",
+      desc: "BlackJack 21 is a JavaScript web app with modular classes, immersive game logic, and edge case handling, delivering a realistic gaming experience.",
       badges: [
         jsIcon, 
         htmlIcon,
