@@ -27,10 +27,10 @@
 } 
 
 a:visited {
-  color: #cfcfcf;;
+  color: #b4d6fd;;
 }
 a:hover {
-  color: #5bc3fb;
+  color: #b4d6fd;
 }
 
 @media (max-width: 500px) {

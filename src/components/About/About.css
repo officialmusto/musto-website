@@ -13,8 +13,10 @@
   justify-content: center;
   align-self: center;
   text-align: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+  background: #6c6c6c45;
+  backdrop-filter: blur(10px);
+  border: solid 1px #dedede3f;
+  box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 1.5rem;
 }
 
@@ -22,36 +24,32 @@
   gap: 20px;
   font-size: 1.5rem;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
-  color: #eaeaea;
+  color: #dedede;
 }
 
 #about-text {
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
-  color: #dfdfdf;
+  color: #dedede;
 }
 
 .connect-link-div {
   justify-content: center;
-  color: #9596de;
+  color: #b4d6fd;
 }
 
 a {
-  color: inherit;
-}
-
-a:visited {
-  color: inherit;
+  color: #b4d6fd ;
 }
 
 a:hover {
-  color: #ebeaec;
+  color: #b4d6fd;
 }
 
 #connect-link {
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  color: #a6a7ee;
+  color: #dedede;
   max-width: 100px;
   margin: 50px;
 }

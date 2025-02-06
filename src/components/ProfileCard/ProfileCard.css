@@ -1,4 +1,5 @@
 #home {
+  
   width: 100%;
   gap: 20px;
   scroll-margin-top: 230px;
@@ -7,6 +8,9 @@
   align-items: center;
   flex-direction: column;
   padding: 50px;
+  background: #6c6c6c45;
+  backdrop-filter: blur(10px);
+  border: solid 1px #dedede3f;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 2rem;
 }

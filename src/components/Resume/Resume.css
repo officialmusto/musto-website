@@ -7,18 +7,16 @@
   align-content: center;
   align-self: center;
   background: #7575753a;
-  border: solid 1px #b2b2b231;
-  border-radius: 20px;
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
-  box-shadow: 0 8px 32px 10px #0000007e;
+  backdrop-filter: blur(10px);
+  border: solid 1px #dedede3f;
+  box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 26px;
   padding: 20px;
   margin-bottom: 450px;
 }
 
 .resume-text-link {
-
+  
   align-items: flex-start;
   flex-direction: column;
   display: flex;
@@ -26,7 +24,7 @@
 }
 
 .download-link {
-
+  
   color: #a6a7ee;
   font-size: 1.4rem;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
@@ -34,6 +32,7 @@
 }
 
 .resume-pages {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +41,7 @@
 }
 
 #resume-1, #resume-2 {
+  
   margin: 20px;
   height: 100%;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
@@ -49,11 +49,13 @@
 }
 
 #resume-text {
+  
   font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
   color: #eaeaea;
 }
 
 #resume-1:hover, #resume-2:hover {
+  
   animation: growAnimation 0.354s ease;
 }
 
