@@ -73,9 +73,20 @@ body {
   object-fit: cover;
 }
 
+.all-el {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .profile-and-about {
-  margin: 5%
+  width: 90%;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -88,10 +99,7 @@ body {
 
 /* ---------------------------------------- */
 
-@media (max-width: 850px) {
-  .all-el{
-    justify-content: center;
-  }
+@media (max-width: 1100px) {
 
   .profile-and-about {
     display: flex;
