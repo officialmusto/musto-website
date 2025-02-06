@@ -66,7 +66,7 @@ a:hover {
     right: -42%;
     height: 65%;
     width: 50%;
-    background: rgba(42, 42, 42, 0.9);
+
     border-radius: 15px;
     box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
     flex-direction: column;
@@ -77,9 +77,19 @@ a:hover {
     justify-content: center;
   }
 
+  .nav {
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px; /* Space between items */
+  }
+
   #nav-el.expanded {
     right: -42%;
-
     opacity: 1;
   }
 
