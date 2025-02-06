@@ -56,20 +56,22 @@ body {
 
 .all-el {
   margin-top: 250px;
-  display: flex;
-  flex-direction: column;
 }
 
 .profile-and-about {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
   justify-content: center;
 }
 
 
 .projects-and-resume {
   display: flex;
+  align-self: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 /* ---------------------------------------- */

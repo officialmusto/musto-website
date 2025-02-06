@@ -1,4 +1,6 @@
 #resume {
+  scroll-margin-top: 250px;
+  gap: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,22 +14,21 @@
   box-shadow: 0 8px 32px 10px #0000007e;
   border-radius: 26px;
   padding: 20px;
+  margin-bottom: 450px;
 }
 
 .resume-text-link {
 
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
-  text-align: left;
 }
 
 .download-link {
 
   color: #a6a7ee;
   font-size: 1.4rem;
-  padding: 14px;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   z-index: 0;
 }
@@ -43,7 +44,6 @@
 #resume-1, #resume-2 {
   margin: 20px;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
   border-radius: 2.4%;
 }
@@ -54,7 +54,6 @@
 }
 
 #resume-1:hover, #resume-2:hover {
-  transform: scale(.8);
   animation: growAnimation 0.354s ease;
 }
 
@@ -64,7 +63,7 @@
     animation-timing-function: ease-out;
   }
   to {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
 
