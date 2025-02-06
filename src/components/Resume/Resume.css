@@ -1,5 +1,5 @@
 #resume {
-  scroll-margin-top: 250px;
+  scroll-margin-top: 190px;
   gap: 20px;
   display: flex;
   align-items: center;
@@ -69,7 +69,34 @@
 
 /* -------------------------- */
 
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
+
+  #resume {
+    width: 90%;
+  }
+
+  #resume-1, #resume-2 {
+    margin: 20px;
+    height: 400px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+    border-radius: 2.4%;
+  }
+
+
+}
+@media (max-width: 550px) {
+  #resume {
+    flex-direction: column;
+  }
+
+  #resume-1, #resume-2 {
+    margin: 20px;
+    height: 250px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+    border-radius: 2.4%;
+    flex-direction: column;
+  }
+
   .resume-pages {
     flex-direction: column;
   }
