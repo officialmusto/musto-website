@@ -1,11 +1,13 @@
 #home {
+  gap: 20px;
   scroll-margin-top: 250px;
   display: flex;
+  align-self: center;
   align-items: center;
   flex-direction: column;
   padding: 50px;
   margin: 10px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
+  box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 2rem;
 }
 
@@ -27,13 +29,14 @@
 }
 
 #brand-statement {
+
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px;
   letter-spacing: 2px;
   font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
-  font-size: .85rem;
+  font-size: 1rem;
   color: #eaeaea;
 }
 
@@ -48,7 +51,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
+  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: .8rem;
   color: #9596de;
   gap: 20px;
