@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 
 // FONT AWESOME ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // X icon added
 
 // ASSETS
 import homeIcon from '../../assets/icons/home.png'
@@ -18,11 +18,18 @@ import '../NavBar/NavBar.css'
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const menuRef = useRef(null)
+  const menuRef = useRef(null) // Reference for the menu
+  const menuButtonRef = useRef(null) // Reference for the button
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      // If the click is NOT on the menu or button, close the menu
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
         setMenuOpen(false)
       }
     }
@@ -30,7 +37,7 @@ function NavBar() {
     if (menuOpen) {
       document.addEventListener('mousedown', handleClickOutside)
     }
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
@@ -39,40 +46,43 @@ function NavBar() {
   return (
     <>
       {/* Mobile Menu Button */}
-      <button className={`menu-button ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
-        <FontAwesomeIcon icon={faBars} />
+      <button
+        ref={menuButtonRef}
+        className={`menu-button ${menuOpen ? 'active' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />{' '}
       </button>
-
 
       {/* Navigation Menu */}
       <div ref={menuRef} id="nav-el" className={menuOpen ? 'expanded' : ''}>
         <nav className="nav">
-          <div className="widgets-icon">
-            <img src={widgetsIcon} className="widgets-icon" alt="Widgets" />
+          <div className="nav-item">
+            <img src={widgetsIcon} className="icon" alt="Widgets" />
             <HashLink smooth to="/widgets">
               widgets
             </HashLink>
           </div>
-          <div className="docs-icon">
-            <img src={docsIcon} className="docs-icon" alt="Docs" />
+          <div className="nav-item">
+            <img src={docsIcon} className="icon" alt="Docs" />
             <HashLink smooth to="/">
               docs
             </HashLink>
           </div>
-          <div className="home-icon">
-            <img src={homeIcon} className="home-icon" alt="Home" />
+          <div className="nav-item">
+            <img src={homeIcon} className="icon" alt="Home" />
             <HashLink smooth to="/">
               home
             </HashLink>
           </div>
-          <div className="comm-icon">
-            <img src={commIcon} className="comm-icon" alt="Community" />
+          <div className="nav-item">
+            <img src={commIcon} className="icon" alt="Community" />
             <HashLink smooth to="/">
               community
             </HashLink>
           </div>
-          <div className="dono-icon">
-            <img src={donoIcon} className="dono-icon" alt="Donations" />
+          <div className="nav-item">
+            <img src={donoIcon} className="icon" alt="Donations" />
             <HashLink smooth to="/donate">
               donations
             </HashLink>
