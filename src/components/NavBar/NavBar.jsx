@@ -26,7 +26,7 @@ function NavBar() {
         <div className="docs-icon">
         <img src={docsIcon} className="docs-icon" />
         <HashLink smooth to="/">
-          home
+          docs
         </HashLink>
         </div>
         <div className="home-icon">
@@ -38,13 +38,13 @@ function NavBar() {
         <div className="comm-icon">
         <img src={commIcon} className="comm-icon" />
         <HashLink smooth to="/">
-          home
+          community
         </HashLink>
         </div>        
         <div className="dono-icon">
         <img src={donoIcon} className="dono-icon" />
         <HashLink smooth to="/donate">
-          home
+          donations
         </HashLink>
         </div>
       </nav>
