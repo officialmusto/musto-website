@@ -1,8 +1,11 @@
 #about-content {
+  width: 20%;
+  align-content: center;
   margin: 10px;
 }
 
 #about {
+
   padding: 20px;
 }
 

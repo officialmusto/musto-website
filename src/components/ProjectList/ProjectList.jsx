@@ -101,7 +101,6 @@ function ProjectList() {
 
   return (
     <>
-      <h1 id="project-list-text">Project List</h1>
       <section id="portfolio">
         {projects.map((project, idx) => {
           return <ProjectCard key={idx} project={project} cardIdx={idx} />

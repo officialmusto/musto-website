@@ -26,6 +26,17 @@
   font-weight: bolder;
   font-style: bolder;
 }
+@keyframes gradientAnimation {
+  0% { background-position: 100%; }
+  50% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+@-webkit-keyframes gradientAnimation {
+  0% { background-position: 100%; }
+  50% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+/* ---------------------------------------- */
 html, * {
   padding: 0;
   margin: 0;
@@ -40,38 +51,28 @@ body {
   background-image: linear-gradient(45deg, #463030, #4a465b, #4d5c5b, #534658, #275157);
   background-size: 200%;
   animation: gradientAnimation 10s ease infinite;
-
+  
 }
-@keyframes gradientAnimation {
-  0% { background-position: 100%; }
-  50% { background-position: 0%; }
-  100% { background-position: 100%; }
-}
-@-webkit-keyframes gradientAnimation {
-  0% { background-position: 100%; }
-  50% { background-position: 0%; }
-  100% { background-position: 100%; }
-}
-/* ---------------------------------------- */
 
 .all-el {
-
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-and-about {
-  margin-top: 250px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  width: 50%;
+  align-content: center;
+
 }
 
 
 .projects-and-resume {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  padding: 50px;
+  margin: 50px;
 }
 
 /* ---------------------------------------- */
