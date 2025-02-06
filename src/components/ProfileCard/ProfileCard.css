@@ -56,22 +56,22 @@
   flex-direction: row;
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: .8rem;
-  color: #9596de;
+  color: #e2e2e2;
   gap: 20px;
   
 }
 
 a {
   text-decoration: none;
-  color: #a6a7ee;
+  color: #e2e2e2;
 }
 
 a:visited {
-  color: #a6a7ee;
+  color: #e2e2e2;
 }
 
 a:hover {
-  color: #ebeaec;
+  color: #b4d6fd;
 }
 
 #github-link {
