@@ -58,4 +58,10 @@ a:hover {
 
 
 @media (max-width: 850px) {
+  #about-text {
+    padding: 3%;
+    font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #dedede;
+  }
 }

@@ -45,9 +45,10 @@
 }
 
 #desc {
+  padding: 10px;
   height: 100%;
   width: 60%;
-  font-family: "avenir-next-regular", Arial, Helvetica;
+  font-family: "avenir-next-medium", Arial, Helvetica;
   font-size: 80%;
   color: #262626;
   text-align: center;
@@ -58,6 +59,7 @@
 }
 
 .name-links {
+  
   height: 100%;
   width: 50%;
   display: flex;
