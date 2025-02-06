@@ -1,16 +1,17 @@
 #about-content {
-  width: 100%;
   align-content: center;
   margin: 10px;
 }
 
 #about {
+  width: 100%;
   padding: 20px;
 }
 
 .about-box {
-
   display: flex;
+  justify-content: center;
+  align-self: center;
   text-align: center;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
@@ -25,13 +26,13 @@
 }
 
 #about-text {
-  font-family: "avenir-next-medium", Arial, Helvetica, sans-serif;
+  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   color: #dfdfdf;
 }
 
 .connect-link-div {
-  margin: 10px;
+  justify-content: center;
   color: #9596de;
 }
 
@@ -56,5 +57,8 @@ a:hover {
 }
 
 
-@media (max-width: 1700px) {
+@media (max-width: 850px) {
+  #about-text {
+    font-size: 1rem;
+  }
 }

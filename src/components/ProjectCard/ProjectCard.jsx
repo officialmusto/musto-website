@@ -9,9 +9,10 @@ import "../ProjectCard/ProjectCard.css"
 
 function ProjectCard({ project, cardIdx }) {
   return (
-    <div key={cardIdx} className="project-card">
+    <div style={{backgroundImage: `url(${project.thumbnail})`, backgroundSize: 'cover'}}key={cardIdx} className="project-card">
+      <section className="name-links">
       <h2 id="title">{project.title}</h2>
-      {project.links.map((link, idx) => {
+    {project.links.map((link, idx) => {
         return (
           <div key={idx}>
             <div className="project-links">
@@ -39,7 +40,7 @@ function ProjectCard({ project, cardIdx }) {
           </div>
         );
       })}
-      <img id="thumbnail" src={project.thumbnail} alt="thumbnail" />
+      </section>
       <h2 id="desc">{project.desc}</h2>
       <div className="badges">
         {project.badges.map((badge, idx) => {
@@ -54,7 +55,7 @@ function ProjectCard({ project, cardIdx }) {
         })}
       </div>
     </div>
-  );
+  )
 }
 
 export default ProjectCard

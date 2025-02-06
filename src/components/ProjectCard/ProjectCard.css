@@ -1,79 +1,95 @@
-
-
 .project-card {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 #00000096;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Blur effect overlay */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-flow: column wrap;
-  padding: 25px;
-  gap: 50px;
-  background: #9596de;
-  box-shadow: 0 8px 32px 0 #00000096;  border-radius: 1.2rem;
+  backdrop-filter: blur(8px);
+  background: #1919193c;
+  border: solid 1px #d4d4d454;
+  z-index: 0;
+}
+
+/* Ensure content is above the blur */
+.project-card > * {
+
+  z-index: 1;
 }
 
 #title {
-  font-family: "avenir-next-regular", Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
-  color: #eaeaea;
-}
-
-#thumbnail {
-  border: none;
-  box-shadow: 0 8px 20px 01px #0d0d10;
-  border-radius: 2.4%;
-  max-height: 120px;
+  padding: 10px;
+  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #e2e2e2;
 }
 
 #desc {
-  font-family: "avenir-next-light", Arial, Helvetica;
-  font-size: .7rem;
-  color: #eaeaea;
-  word-spacing: 1px;
-  line-height: 1rem;
-  margin: 14px;
-  padding: 0px;
+  height: 100%;
+  width: 60%;
+  font-family: "avenir-next-regular", Arial, Helvetica;
+  font-size: .9rem;
+  color: #262626;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-links {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .project-links {
-  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
-  font-size: .9rem;
+  gap: 10px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: left;
-  color: #9596de;
-  margin: 8px;
-  gap: 40px;
+  flex-direction: column;
+  font-family: "avenir-next-bolder", Arial, Helvetica, sans-serif;
 }
 
-.github-link {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 10px;
-}
+.github-link,
 .deployed-link {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  gap: 10px;
+  flex-direction: column;
 }
-
 
 .badges {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  align-self: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  width: 10%;
   align-items: center;
-  flex-direction: row;
-  padding-bottom: 20px;
+  flex-direction: column;
 }
 
 #badge {
