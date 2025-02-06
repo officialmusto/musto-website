@@ -16,10 +16,8 @@ function App() {
     <NavBar />
       <div className='all-el'>
         <div className='profile-and-about'>
-          <div className='about-child'>
             <ProfileCard />
             <About />
-          </div>
         </div>
         <div className='projects-and-resume'>
           <ProjectList />

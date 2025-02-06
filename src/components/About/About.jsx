@@ -8,17 +8,7 @@ function About() {
         <section id="about">
           <h1 id="about-title">About Me</h1>
           <p id="about-text">
-            Welcome! I'm Christian Musto, a certified Software Engineer based in
-            Cleveland, Ohio. With a proven track record in customer service, I
-            seamlessly transitioned into the world of software development, driven
-            by my unwavering passion for creating exceptional user experiences. My
-            unique blend of technical expertise and creative pursuits, including
-            photography, producing music, and creating content for a small
-            community sets me apart from the rest. As you explore my portfolio,
-            you'll discover a versatile professional who brings a fresh
-            perspective and a commitment to excellence. I invite you to connect
-            with me and explore how our collaboration can elevate your software
-            development projects to new heights.
+          I’m a software engineer, musician, and content creator based in Cleveland, Ohio. I have a strong background in customer service but found my real passion in software development—especially building cool tools that improve live streaming and user experiences. Whether I’m coding interactive widgets, producing music, or creating content for my YouTube channel Mustology, I’m always finding new ways to blend creativity with technology. Check out my work, and let’s build something awesome together!
           </p>
           <div className="connect-link-div">
             <a id="connect-link"
