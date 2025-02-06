@@ -92,7 +92,6 @@ body {
 
 .projects-and-resume {
   display: flex;
-  width: 90%;
   align-self: center;
   flex-direction: column;
   justify-content: center;
