@@ -46,10 +46,10 @@
 #desc {
   padding: 10px;
   height: 100%;
-  width: 60%;
-  font-family: "avenir-next-medium", Arial, Helvetica;
+  width: 100%;
+  font-family: "avenir-next-bold", Arial, Helvetica;
   font-size: 80%;
-  color: #262626;
+  color: #e2e2e2;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -64,29 +64,39 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
 }
 
 .project-links {
   gap: 10px;
   display: flex;
-  flex-direction: row;
-  font-family: "avenir-next-bolder", Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  font-family: "avenir-next-medium", Arial, Helvetica, sans-serif;
 }
 
 .github-link,
 .deployed-link {
+  gap: 10px;
+  padding: 5px;
+  font-size: small;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.github-link > img,
+.deployed-link > img {
+  height: 20px;
 }
 
 .badges {
   display: flex;
   align-self: flex-end;
   justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
   height: 100%;
   width: 10%;
   align-items: center;
