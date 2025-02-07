@@ -1,8 +1,5 @@
-// css
-import './App.css'
-
-// assets
-import bannerBackground from './assets/videos/mustobs.mp4'
+// npm imports
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -11,26 +8,29 @@ import ProfileCard from './components/ProfileCard/ProfileCard'
 import ProjectList from './components/ProjectList/ProjectList'
 import Resume from './components/Resume/Resume'
 
+import Landing from './pages/Landing/Landing'
+import Docs from './pages/Docs/Docs'
+import Portfolio from './pages/Portfolio/Portfolio'
+import MyProducts from './pages/MyProducts/MyProducts'
+import Donations from './pages/Donations/Donations'
+
+// css
+import './App.css'
+
+// assets
+
+
 function App() {
   return (
     <>
       <NavBar />
-      <div className="banner-div">
-        <video autoPlay loop muted playsInline>
-          <source src={bannerBackground} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className="all-el">
-        <div className="profile-and-about">
-          <ProfileCard />
-          <About />
-        </div>
-        <div className="projects-and-resume">
-          <ProjectList />
-          <Resume />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/docs" element={<Docs />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/widgets" element={<MyProducts />} />
+        <Route path="/donate" element={<Donations />} />
+      </Routes>
     </>
   )
 }
