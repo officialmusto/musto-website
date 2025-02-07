@@ -1,0 +1,132 @@
+/* ============================= */
+/* Desktop Styles */
+/* ============================= */
+#nav-el {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 170px;
+  width: 100%;
+  margin: 0 auto;
+  background: #2a2a2a57;
+  border: solid 1px #b2b2b231;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  box-shadow: 0 8px 32px 10px #0000007e;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: flex-end;
+  height: 60%;
+  width: 100%;
+  max-width: 1200px;
+  font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #cfcfcf;
+  padding: 10px 0;
+}
+
+.icon {
+  gap: 20px;
+  height: 17px;
+  width: 17px;
+}
+
+.nav-item {
+  border-radius: 23px;
+  gap: 10px;
+  display: flex;
+}
+
+a {
+
+  display: flex;
+  gap: 10px;
+}
+
+a:visited {
+  color: #b4d6fd;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #b4d6fd;
+}
+
+.menu-button {
+  display: none;
+}
+
+
+
+
+/* ============================= */
+/* Mobile Styles */
+/* ============================= */
+@media (max-width: 650px) {
+
+  .menu-button { 
+    display: block;
+    position: fixed;
+    top: 20%; 
+    right: 20px;
+    z-index: 1001;
+    padding: 10px 14px 5px 14px;
+    font-size: 32px;
+    background: #2a2a2a57;
+    border: solid 1px #b2b2b231;
+    border-radius: 10px;
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    box-shadow: 0 8px 32px 10px #0000007e;
+    color: rgb(217, 217, 217);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-button.active {
+    transform: rotate(-90deg);
+    background: #d5d5d557;
+  }
+
+  #nav-el {
+    position: fixed;
+    height: 100px;
+    border-radius: 15px;
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+    transform-origin: top right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  #nav-el.expanded, #nav-el.expanded.detached {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  .nav {
+    
+    padding: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
