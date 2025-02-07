@@ -17,21 +17,7 @@
   z-index: 10;
   display: flex;
   justify-content: center;
-}
 
-#nav-el.detached {
-  height: 170px;
-  width: 95%;
-  border-radius: 32px;
-  margin: 0 auto;
-  background: #2a2a2a57;
-  border: solid 1px #b2b2b231;
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
-  box-shadow: 0 8px 32px 10px #0000007e;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
 }
 
 .nav {
@@ -55,6 +41,7 @@
 }
 
 .nav-item {
+  border-radius: 23px;
   gap: 10px;
   display: flex;
 }
@@ -84,10 +71,10 @@ a:hover {
 /* ============================= */
 @media (max-width: 650px) {
 
-  .menu-button {
+  .menu-button { 
     display: block;
     position: fixed;
-    top: 120px; 
+    top: 20px; 
     right: 20px;
     z-index: 1001;
     padding: 10px 14px 5px 14px;
@@ -108,16 +95,10 @@ a:hover {
     background: #d5d5d557;
   }
 
-
   #nav-el {
     position: fixed;
-    top: 120px;
-    right: -44%;
-    height: auto;
-    width: 200px; 
+    height: 100px;
     border-radius: 15px;
-    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.5);
-    background: #2a2a2a57;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
     opacity: 0;
@@ -127,20 +108,17 @@ a:hover {
     z-index: 1000;
   }
 
-  #nav-el.expanded {
+  #nav-el.expanded, #nav-el.expanded.detached {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
 
-  /* Inner nav styles remain similar */
   .nav {
-    height: 100%;
+    
     padding: 30px;
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     gap: 20px;
   }
 
