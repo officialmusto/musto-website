@@ -1,5 +1,5 @@
 // css
-import '../ProfileCard/ProfileCard.css'
+import '../ProfileCard/ProfileCard.module.css'
 
 // assets
 import profilePicture from '../../assets/profile-picture.png'

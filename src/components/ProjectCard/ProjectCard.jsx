@@ -5,7 +5,7 @@ import githubIcon from '../../assets/github-logo.svg'
 import deployedIcon from '../../assets/icons/deployed-icon.svg'
 
 // css
-import '../ProjectCard/ProjectCard.css'
+import '../ProjectCard/ProjectCard.module.css'
 
 function ProjectCard({ project, cardIdx }) {
   return (

@@ -19,7 +19,7 @@ import hhThumbnail from '../../assets/habit-hero-screenshot.png'
 import ProjectCard from '../ProjectCard/ProjectCard'
 
 // css
-import '../ProjectList/ProjectList.css'
+import '../ProjectList/ProjectList.module.css'
 
 function ProjectList() {
   const projects = [

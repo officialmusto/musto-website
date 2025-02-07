@@ -12,7 +12,7 @@ import commIcon from '../../assets/icons/community.png'
 import donoIcon from '../../assets/icons/dono.png'
 
 // CSS
-import '../NavBar/NavBar.css'
+import '../NavBar/NavBar.module.css'
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -89,7 +89,7 @@ function NavBar() {
             height: menuOpen ? 350 : 350,
             borderRadius: 20, 
           }}
-          transition={{ stiffness: 100, damping: 5 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 5 }}
         >
           <nav className="nav">
             <div className="nav-item">

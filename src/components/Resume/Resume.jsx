@@ -4,7 +4,7 @@ import resumeP1 from "../../assets/christian-musto-resume-1.png"
 import resumeP2 from "../../assets/christian-musto-resume-2.png"
 
 // css
-import "../Resume/Resume.css"
+import "../Resume/Resume.module.css"
 
 function Resume() {
   return (
