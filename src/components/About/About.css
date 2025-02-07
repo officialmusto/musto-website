@@ -34,6 +34,7 @@
 }
 
 .connect-link-div {
+  width: 100%;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -52,7 +53,7 @@ a:hover {
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #dedede;
-  max-width: 100px;
+
 }
 
 @media (max-width: 850px) {

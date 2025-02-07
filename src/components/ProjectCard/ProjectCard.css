@@ -106,10 +106,3 @@
 #badge {
   max-height: 20px;
 }
-
-
-@media (max-width: 850px) {
-  .project-links {
-    flex-direction: row;
-  }
-}

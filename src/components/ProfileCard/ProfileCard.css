@@ -52,12 +52,21 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
   font-size: .8rem;
   color: #e2e2e2;
-  gap: 20px;
-  
+  gap: 30px;
 }
+
+#email-link, #github-link, #linkedin-link {
+  padding: 5px;
+  font-size: small;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
 
 a {
   text-decoration: none;
@@ -70,26 +79,6 @@ a:visited {
 
 a:hover {
   color: #8486ff;
-}
-
-#github-link {
-  
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 5px
-}
-
-#email-link {
-  display: flex;
-  align-items: center;
-  gap: 5px
-}
-
-#linkedin-link {
-  display: flex;
-  align-items: center;
-  gap: 5px
 }
 
 @media (max-width: 500px) {
