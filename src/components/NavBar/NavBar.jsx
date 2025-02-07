@@ -81,14 +81,15 @@ function NavBar() {
           ref={menuRef}
           id="nav-el"
           className={`${menuOpen ? 'expanded' : ''}`}
-          initial={{ x: '100%' }}
+          initial={{ x: 350}}
           animate={{
-            x: menuOpen ? 120 : 20,
-            y: menuOpen ? 0 : 0,
-            width: menuOpen ? '45%' : '100%',
-            height: menuOpen ? '100%' : '100%',
+            x: menuOpen ? 100 : 120,
+            y: menuOpen ? 200 : 0,
+            width: menuOpen ? 200 : 200,
+            height: menuOpen ? 350 : 350,
+            borderRadius: 20, 
           }}
-          transition={{ type: 'spring', stiffness: 30, damping: 5 }}
+          transition={{ stiffness: 100, damping: 5 }}
         >
           <nav className="nav">
             <div className="nav-item">
@@ -132,7 +133,7 @@ function NavBar() {
             height: isScrolled ? 130 : 170,
             borderRadius: isScrolled ? 32 : 0,
           }}
-          transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+          transition={{ type: 'spring', stiffness: 250, damping: 5 }}
         >
           <nav className="nav">
             <div className="nav-item">
