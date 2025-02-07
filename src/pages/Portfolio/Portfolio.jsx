@@ -1,8 +1,19 @@
 import React from 'react'
 
+// components
+import About from '../../components/About/About'
+import ProfileCard from '../../components/ProfileCard/ProfileCard'
+import ProjectList from '../../components/ProjectList/ProjectList'
+import Resume from '../../components/Resume/Resume'
+
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <>
+      <About />
+      <ProfileCard />
+      <ProjectList />
+      <Resume />
+    </>
   )
 }
 

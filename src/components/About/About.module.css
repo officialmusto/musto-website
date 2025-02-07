@@ -1,4 +1,4 @@
-#about-content {
+#aboutContent {
   height: 100%;
   width: 90%;
   align-self: center;
@@ -9,7 +9,7 @@
   padding: 10px;
 }
 
-.about-box {
+.aboutBox {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -21,21 +21,21 @@
   border-radius: 33px;
 }
 
-#about-title {
+#aboutTitle {
   padding: 20px;
   font-size: 1.5rem;
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   color: #dedede;
 }
 
-#about-text {
+#aboutText {
   padding: 3%;
   font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   color: #dedede;
 }
 
-.connect-link-div {
+.connectLinkDiv {
   width: 100%;
   padding: 20px;
   display: flex;
@@ -51,7 +51,7 @@ a:hover {
   color: #b4d6fd;
 }
 
-#connect-link {
+#connectLink {
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #dedede;
@@ -59,7 +59,7 @@ a:hover {
 }
 
 @media (max-width: 850px) {
-  #about-text {
+  #aboutText {
     padding: 3%;
     font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
     font-size: 1rem;
