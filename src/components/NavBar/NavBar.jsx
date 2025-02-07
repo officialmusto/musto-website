@@ -8,11 +8,11 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import homeIcon from '../../assets/icons/home.png'
 import widgetsIcon from '../../assets/icons/switch.png'
 import docsIcon from '../../assets/icons/docs.png'
-import commIcon from '../../assets/icons/community.png'
+import portIcon from '../../assets/icons/portfolio.png'
 import donoIcon from '../../assets/icons/dono.png'
 
 // CSS
-import '../NavBar/NavBar.module.css'
+import styles from './NavBar.module.css'
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -67,21 +67,21 @@ function NavBar() {
     <>
       <button
         ref={menuButtonRef}
-        className={`menu-button ${menuOpen ? 'active' : ''}`}
+        className={`${styles.menuButton} ${menuOpen ? styles.active : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <FontAwesomeIcon
           icon={menuOpen ? faTimes : faBars} // Toggle icon
-          className="menu-icon"
+          className={styles.menuIcon}
         />
       </button>
 
       {isMobile ? (
         <motion.div
           ref={menuRef}
-          id="nav-el"
-          className={`${menuOpen ? 'expanded' : ''}`}
-          initial={{ x: 350}}
+          id={styles.navEl}
+          className={`${menuOpen ? styles.expanded : ''}`}
+          initial={{ x: 350 }}
           animate={{
             x: menuOpen ? '45%' : '45%',
             y: menuOpen ? '68%' : '68%',
@@ -91,76 +91,71 @@ function NavBar() {
           }}
           transition={{ type: 'spring', stiffness: 100, damping: 5 }}
         >
-          <nav className="nav">
-            <div className="nav-item">
+          <nav className={styles.nav}>
+            <div className={styles.navItem}>
               <Link to="/widgets">
-                <img src={widgetsIcon} className="icon" alt="Widgets" /> widgets
+                <img src={widgetsIcon} className={styles.icon} alt="Widgets" /> widgets
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/docs">
-                <img src={docsIcon} className="icon" alt="Docs" /> docs
+                <img src={docsIcon} className={styles.icon} alt="Docs" /> docs
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/">
-                <img src={homeIcon} className="icon" alt="Home" /> home
+                <img src={homeIcon} className={styles.icon} alt="Home" /> home
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/community">
-                <img src={commIcon} className="icon" alt="Community" />{' '}
-                community
+                <img src={commIcon} className={styles.icon} alt="Community" /> community
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/donate">
-                <img src={donoIcon} className="icon" alt="Donations" />{' '}
-                donations
+                <img src={donoIcon} className={styles.icon} alt="Donations" /> donations
               </Link>
             </div>
           </nav>
         </motion.div>
       ) : (
         <motion.div
-          id="nav-el"
-          className={`${isScrolled ? 'detached' : 'attached'}`}
+          id={styles.navEl}
+          className={`${isScrolled ? styles.detached : styles.attached}`}
           initial={{ y: 0 }}
           animate={{
             y: isScrolled ? 25 : 0,
             borderRadius: isScrolled ? 32 : 0,
             width: isScrolled ? '95%' : '100%',
             height: isScrolled ? 130 : 170,
-            borderRadius: isScrolled ? 32 : 0,
           }}
           transition={{ type: 'spring', stiffness: 100, damping: 5 }}
         >
-          <nav className="nav">
-            <div className="nav-item">
+          <nav className={styles.nav}>
+            <div className={styles.navItem}>
               <Link to="/widgets">
-                <img src={widgetsIcon} className="icon" alt="Widgets" /> widgets
+                <img src={widgetsIcon} className={styles.icon} alt="Widgets" /> widgets
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/docs">
-                <img src={docsIcon} className="icon" alt="Docs" /> docs
+                <img src={docsIcon} className={styles.icon} alt="Docs" /> docs
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/">
-                <img src={homeIcon} className="icon" alt="Home" /> home
+                <img src={homeIcon} className={styles.icon} alt="Home" /> home
               </Link>
             </div>
-            <div className="nav-item">
-              <Link to="/community">
-                <img src={commIcon} className="icon" alt="Community" />{' '}
-                community
+            <div className={styles.navItem}>
+              <Link to="/portfolio">
+                <img src={portIcon} className={styles.icon} alt="Portfolio" /> portfolio
               </Link>
             </div>
-            <div className="nav-item">
+            <div className={styles.navItem}>
               <Link to="/donate">
-                <img src={donoIcon} className="icon" alt="Donations" />{' '}
-                donations
+                <img src={donoIcon} className={styles.icon} alt="Donations" /> donations
               </Link>
             </div>
           </nav>
