@@ -74,7 +74,7 @@ a:hover {
   .menu-button { 
     display: block;
     position: fixed;
-    top: 20px; 
+    top: 20%; 
     right: 20px;
     z-index: 1001;
     padding: 10px 14px 5px 14px;
