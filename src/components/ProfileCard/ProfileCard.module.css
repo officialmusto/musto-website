@@ -2,8 +2,6 @@
   width: 90%;
   display: flex;
   justify-content: center;
-  padding-top: 45px;
-  padding-bottom: 45px;
   gap: 20px;
   scroll-margin-top: 230px;
   align-items: center;
@@ -16,20 +14,20 @@
   
 }
 
-#name-text {
+#nameText {
   font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
   font-size: 160%;
   text-align: center;
   color: #e2e2e2;
 }
 
-.name-text-statment {
+.nameTextStatement {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#brand-statement {
+#brandStatement {
 
   display: flex;
   justify-content: center;
@@ -41,7 +39,7 @@
   color: #eaeaea;
 }
 
-.profile-picture {
+.profilePicture {
 
   height: 190px;
   width: 190px;
@@ -60,7 +58,7 @@
   gap: 30px;
 }
 
-#email-link, #github-link, #linkedin-link {
+#emailLink, #githubLink, #linkedInLink {
   gap: 11px;
   padding: 5px;
   font-size: small;
@@ -90,7 +88,7 @@ a:hover {
     flex-direction: column;
   }
 
-  #brand-statement {
+  #brandStatement {
     font-size: .8rem;
   }
 }

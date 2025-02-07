@@ -1,5 +1,4 @@
-.project-card {
-  
+.projectCard {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -17,7 +16,7 @@
 }
 
 /* Blur effect overlay */
-.project-card::before {
+.projectCard::before {
   content: "";
   position: absolute;
   top: 0;
@@ -31,7 +30,7 @@
 }
 
 /* Ensure content is above the blur */
-.project-card > * {
+.projectCard > * {
 
   z-index: 1;
 }
@@ -58,7 +57,7 @@
   align-items: center;
 }
 
-.name-links {
+.nameLinks {
   
   height: 100%;
   width: 100%;
@@ -69,15 +68,15 @@
   gap: 20px;
 }
 
-.project-links {
+.projectLinks {
   gap: 10px;
   display: flex;
   flex-direction: column;
   font-family: "avenir-next-medium", Arial, Helvetica, sans-serif;
 }
 
-.github-link,
-.deployed-link {
+.githubLink,
+.deployedLink {
   gap: 10px;
   padding: 5px;
   font-size: small;
@@ -87,8 +86,8 @@
   flex-direction: row;
 }
 
-.github-link > img,
-.deployed-link > img {
+.githubLink > img,
+.deployedLink > img {
   height: 20px;
 }
 

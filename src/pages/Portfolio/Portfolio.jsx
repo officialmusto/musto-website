@@ -9,8 +9,8 @@ import Resume from '../../components/Resume/Resume'
 const Portfolio = () => {
   return (
     <>
-      <About />
       <ProfileCard />
+      <About />
       <ProjectList />
       <Resume />
     </>

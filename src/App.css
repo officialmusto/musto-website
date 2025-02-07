@@ -54,14 +54,13 @@ html {
   box-sizing: inherit;
 }
 
-/* Modern, sleek animated gradient background */
+
 body {
-  /* Diagonal gradient for a contemporary feel */
+
   background: linear-gradient(135deg, #5555a2, #11193f, #1a1a36);
   background-size: 200% 200%;
   animation: gradientAnimation 15s ease-in-out infinite;
-  
-  /* Ensure modern typography and contrast */
+
   font-family: 'Avenir Next', sans-serif;
   color: #fff;
   margin: 0;

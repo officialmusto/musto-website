@@ -19,7 +19,7 @@ import hhThumbnail from '../../assets/habit-hero-screenshot.png'
 import ProjectCard from '../ProjectCard/ProjectCard'
 
 // css
-import '../ProjectList/ProjectList.module.css'
+import styles from '../ProjectList/ProjectList.module.css'
 
 function ProjectList() {
   const projects = [
@@ -96,7 +96,7 @@ function ProjectList() {
 
   return (
     <>
-      <section id="portfolio">
+      <section id={styles.portfolio}>
         {projects.map((project, idx) => {
           return <ProjectCard key={idx} project={project} cardIdx={idx} />
         })}

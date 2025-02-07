@@ -4,21 +4,21 @@ import resumeP1 from "../../assets/christian-musto-resume-1.png"
 import resumeP2 from "../../assets/christian-musto-resume-2.png"
 
 // css
-import "../Resume/Resume.module.css"
+import styles from"../Resume/Resume.module.css"
 
 function Resume() {
   return (
     <>
-      <section id="resume">
-        <div className="resume-text-link">
-          <h1 id="resume-text">Resume Page</h1>
-          <a className="download-link" href={resumeDownload} download>
+      <section id={styles.resume}>
+        <div className={styles.resumeTextLink}>
+          <h1 id={styles.resumeText}>Resume Page</h1>
+          <a className={styles.downloadLink} href={resumeDownload} download>
             Download
           </a>
         </div>
-        <div className="resume-pages">
+        <div className={styles.resumepges}>
           <img
-            id="resume-1"
+            id={styles.resume1}
             src={resumeP1}
             alt="resume page 1"
             style={{
@@ -27,7 +27,7 @@ function Resume() {
             }}
           />
           <img
-            id="resume-2"
+            id={styles.resume2}
             src={resumeP2}
             alt="resume page 1"
             style={{
