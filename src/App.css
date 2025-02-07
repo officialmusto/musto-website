@@ -38,6 +38,7 @@
 }
 /* ---------------------------------------- */
 *, html {
+
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -46,12 +47,48 @@
   box-sizing: inherit;
 }
 
+/* Modern, sleek animated gradient background */
 body {
+  /* Diagonal gradient for a contemporary feel */
+  background: linear-gradient(135deg, #5555a2, #11193f, #1a1a36);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease-in-out infinite;
   
-  background-color: #1e1e1e;
-  animation: gradientAnimation 10s ease infinite;
-  
+  /* Ensure modern typography and contrast */
+  font-family: 'Avenir Next', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
+
+/* Smooth animated gradient movement */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional: Subtle overlay to add depth and a sleek finish */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* A radial gradient overlay creates a gentle, modern light effect */
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
 
 .banner-div {
   position: relative;

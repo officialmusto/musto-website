@@ -64,19 +64,19 @@ function NavBar() {
             </HashLink>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/">
+            <HashLink smooth to="/docs">
             <img src={docsIcon} className="icon" alt="Docs" />
               docs
             </HashLink>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/">
+            <HashLink smooth to="/home">
             <img src={homeIcon} className="icon" alt="Home" />
               home
             </HashLink>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/">
+            <HashLink smooth to="/community">
             <img src={commIcon} className="icon" alt="Community" />
               community
             </HashLink>
