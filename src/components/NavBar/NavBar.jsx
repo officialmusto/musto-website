@@ -1,20 +1,22 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 // Assets
-import homeIcon from '../../assets/icons/home.png';
-import widgetsIcon from '../../assets/icons/switch.png';
-import docsIcon from '../../assets/icons/docs.png';
-import commIcon from '../../assets/icons/community.png';
-import donoIcon from '../../assets/icons/dono.png';
+import homeIcon from '../../assets/icons/home.png'
+import widgetsIcon from '../../assets/icons/switch.png'
+import docsIcon from '../../assets/icons/docs.png'
+import commIcon from '../../assets/icons/community.png'
+import donoIcon from '../../assets/icons/dono.png'
 
 // CSS
-import '../NavBar/NavBar.css';
+import '../NavBar/NavBar.css'
 
 function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const menuButtonRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const menuRef = useRef(null)
+  const menuButtonRef = useRef(null)
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -24,18 +26,31 @@ function NavBar() {
         menuButtonRef.current &&
         !menuButtonRef.current.contains(event.target)
       ) {
-        setMenuOpen(false);
+        setMenuOpen(false)
       }
     }
 
     if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside)
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [menuOpen]);
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [menuOpen])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
@@ -47,7 +62,21 @@ function NavBar() {
         ☰
       </button>
 
-      <div ref={menuRef} id="nav-el" className={menuOpen ? 'expanded' : ''}>
+      <motion.div
+        ref={menuRef}
+        id="nav-el"
+        className={`${menuOpen ? 'expanded' : ''} ${
+          isScrolled ? 'detached' : 'attached'
+        }`}
+        initial={{ y: 0 }}
+        animate={{ 
+          y: isScrolled ? 20 : 0,
+          borderRadius: isScrolled ? 32 : 0,
+          width: isScrolled ? "95%" : "100%",
+        }}
+        transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+        
+      >
         <nav className="nav">
           <div className="nav-item">
             <Link to="/widgets">
@@ -75,9 +104,9 @@ function NavBar() {
             </Link>
           </div>
         </nav>
-      </div>
+      </motion.div>
     </>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar
