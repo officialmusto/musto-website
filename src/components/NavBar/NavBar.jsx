@@ -1,96 +1,83 @@
-// NPM MODULES
-import { HashLink } from 'react-router-hash-link'
-import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
-// FONT AWESOME ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // X icon added
-
-// ASSETS
-import homeIcon from '../../assets/icons/home.png'
-import widgetsIcon from '../../assets/icons/switch.png'
-import docsIcon from '../../assets/icons/docs.png'
-import commIcon from '../../assets/icons/community.png'
-import donoIcon from '../../assets/icons/dono.png'
+// Assets
+import homeIcon from '../../assets/icons/home.png';
+import widgetsIcon from '../../assets/icons/switch.png';
+import docsIcon from '../../assets/icons/docs.png';
+import commIcon from '../../assets/icons/community.png';
+import donoIcon from '../../assets/icons/dono.png';
 
 // CSS
-import '../NavBar/NavBar.css'
+import '../NavBar/NavBar.css';
 
 function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const menuRef = useRef(null) // Reference for the menu
-  const menuButtonRef = useRef(null) // Reference for the button
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      // If the click is NOT on the menu or button, close the menu
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target) &&
         menuButtonRef.current &&
         !menuButtonRef.current.contains(event.target)
       ) {
-        setMenuOpen(false)
+        setMenuOpen(false);
       }
     }
 
     if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [menuOpen])
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <>
-      {/* Mobile Menu Button */}
       <button
         ref={menuButtonRef}
         className={`menu-button ${menuOpen ? 'active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />{' '}
+        ☰
       </button>
 
-      {/* Navigation Menu */}
       <div ref={menuRef} id="nav-el" className={menuOpen ? 'expanded' : ''}>
         <nav className="nav">
           <div className="nav-item">
-            <HashLink smooth to="/widgets">
-            <img src={widgetsIcon} className="icon" alt="Widgets" />
-              widgets
-            </HashLink>
+            <Link to="/widgets">
+              <img src={widgetsIcon} className="icon" alt="Widgets" /> widgets
+            </Link>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/docs">
-            <img src={docsIcon} className="icon" alt="Docs" />
-              docs
-            </HashLink>
+            <Link to="/docs">
+              <img src={docsIcon} className="icon" alt="Docs" /> docs
+            </Link>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/home">
-            <img src={homeIcon} className="icon" alt="Home" />
-              home
-            </HashLink>
+            <Link to="/">
+              <img src={homeIcon} className="icon" alt="Home" /> home
+            </Link>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/community">
-            <img src={commIcon} className="icon" alt="Community" />
-              community
-            </HashLink>
+            <Link to="/community">
+              <img src={commIcon} className="icon" alt="Community" /> community
+            </Link>
           </div>
           <div className="nav-item">
-            <HashLink smooth to="/donate">
-            <img src={donoIcon} className="icon" alt="Donations" />
-              donations
-            </HashLink>
+            <Link to="/donate">
+              <img src={donoIcon} className="icon" alt="Donations" /> donations
+            </Link>
           </div>
         </nav>
       </div>
     </>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

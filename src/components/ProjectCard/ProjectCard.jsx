@@ -55,7 +55,6 @@ function ProjectCard({ project, cardIdx }) {
         })}
       </div>
     </div>
-  )
-}
+)}
 
 export default ProjectCard
