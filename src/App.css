@@ -54,9 +54,7 @@ html {
 
 
 body {
-  background: linear-gradient(135deg, #937ae1, #48236b, #301a36);
-  background-size: 100% 100%;
-  animation: gradientAnimation 15s ease-in-out infinite;
+  background-color: rgb(20, 20, 20);
   font-family: 'Avenir Next', sans-serif;
   color: #e5e5e5;
 }
