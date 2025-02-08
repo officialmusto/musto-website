@@ -1,5 +1,4 @@
 #resume {
-  scroll-margin-top: 240px;
   width: 90%;
   gap: 20px;
   display: flex;
@@ -12,7 +11,7 @@
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 26px;
   padding: 40px;
-  margin-bottom: 450px;
+  margin-bottom: 50px;
 }
 
 .resumeTextLink {

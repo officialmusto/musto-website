@@ -1,9 +1,7 @@
 #home {
-  width: 90%;
+  gap: 15px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  scroll-margin-top: 230px;
   align-items: center;
   flex-direction: column;
   background: #6c6c6c45;
@@ -11,7 +9,6 @@
   border: solid 1px #dedede3f;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 33px;
-  
 }
 
 #nameText {
@@ -22,13 +19,14 @@
 }
 
 .nameTextStatement {
+  gap: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #brandStatement {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +38,7 @@
 }
 
 .profilePicture {
-
+  
   height: 190px;
   width: 190px;
   border-radius: 50%;

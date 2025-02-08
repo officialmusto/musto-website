@@ -1,15 +1,14 @@
-#aboutContent {
-  height: 100%;
-  width: 90%;
-  align-self: center;
+
+#about {
   
 }
 
-#about {
-  padding: 10px;
+#aboutContent {
+
 }
 
 .aboutBox {
+  padding: 25px;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -22,14 +21,14 @@
 }
 
 #aboutTitle {
-  padding: 20px;
+  padding: 10px;
   font-size: 1.5rem;
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   color: #dedede;
 }
 
 #aboutText {
-  padding: 3%;
+  padding: 10px;
   font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   color: #dedede;
@@ -37,7 +36,7 @@
 
 .connectLinkDiv {
   width: 100%;
-  padding: 20px;
+
   display: flex;
   justify-content: center;
   color: #b4d6fd;
