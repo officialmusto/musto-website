@@ -14,7 +14,6 @@ import Donations from './pages/Donations/Donations'
 // css
 import './App.css'
 
-
 function App() {
   return (
     <>

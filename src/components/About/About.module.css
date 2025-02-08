@@ -1,21 +1,30 @@
-
-#about {
-  
+.aboutContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #111111;
 }
 
-#aboutContent {
-
+#home,
+.aboutBox {
+  height: 100%;
+  width: 100%;
 }
 
 .aboutBox {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 750px;
   padding: 25px;
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   text-align: center;
-  background: #6c6c6c45;
+  background: #111111;
   backdrop-filter: blur(10px);
-  border: solid 1px #dedede3f;
+  border: solid 1px #3737373f;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 33px;
 }
@@ -35,8 +44,6 @@
 }
 
 .connectLinkDiv {
-  width: 100%;
-
   display: flex;
   justify-content: center;
   color: #b4d6fd;
@@ -54,14 +61,31 @@ a:hover {
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #dedede;
-
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
+  #home,
+  .aboutBox {
+    width: 90%;
+    max-width: 900px;
+  }
   #aboutText {
-    padding: 3%;
-    font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    padding: 10px;
+    font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    color: #dedede;
+  }
+}
+@media (max-width: 850px) {
+  #home,
+  .aboutBox {
+    width: 90%;
+    max-width: 900px;
+  }
+  #aboutText {
+    padding: 10px;
+    font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
     color: #dedede;
   }
 }

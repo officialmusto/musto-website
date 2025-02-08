@@ -51,10 +51,13 @@ function ProjectCard({ project, cardIdx }) {
       <h2 id={styles.desc}>{project.desc}</h2>
       <div className={styles.badges}>
         {project.badges.map((badge, idx) => {
-          return <img id={styles.badge} key={idx} src={badge} alt="badge icon" />
+          return (
+            <img id={styles.badge} key={idx} src={badge} alt="badge icon" />
+          )
         })}
       </div>
     </div>
-)}
+  )
+}
 
 export default ProjectCard

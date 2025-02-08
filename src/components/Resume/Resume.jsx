@@ -1,10 +1,10 @@
 // assets
-import resumeDownload from "../../assets/christian-musto-resume.pdf"
-import resumeP1 from "../../assets/christian-musto-resume-1.png"
-import resumeP2 from "../../assets/christian-musto-resume-2.png"
+import resumeDownload from '../../assets/christian-musto-resume.pdf'
+import resumeP1 from '../../assets/christian-musto-resume-1.png'
+import resumeP2 from '../../assets/christian-musto-resume-2.png'
 
 // css
-import styles from"../Resume/Resume.module.css"
+import styles from '../Resume/Resume.module.css'
 
 function Resume() {
   return (
@@ -16,14 +16,14 @@ function Resume() {
             Download
           </a>
         </div>
-        <div className={styles.resumepges}>
+        <div className={styles.resumePages}>
           <img
             id={styles.resume1}
             src={resumeP1}
             alt="resume page 1"
             style={{
-              maxHeight: "550px",
-              borderRadius: "9px",
+              maxHeight: '550px',
+              borderRadius: '9px',
             }}
           />
           <img
@@ -31,8 +31,8 @@ function Resume() {
             src={resumeP2}
             alt="resume page 1"
             style={{
-              maxHeight: "550px",
-              borderRadius: "9px",
+              maxHeight: '550px',
+              borderRadius: '9px',
             }}
           />
         </div>
