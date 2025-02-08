@@ -1,14 +1,14 @@
 #home {
-  width: 100%;
+  width: 90%;
   padding: 25px;
   gap: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #6c6c6c45;
+  background: #111111;
+  border: solid 1px #3737373f;
   backdrop-filter: blur(10px);
-  border: solid 1px #dedede3f;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 33px;
 }
