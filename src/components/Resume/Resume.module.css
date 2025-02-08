@@ -80,6 +80,7 @@
     flex-direction: column;
   }
 }
+
 @media (max-width: 660px) {
   #resume1,
   #resume2 {
@@ -94,6 +95,7 @@
     flex-direction: column;
   }
 }
+
 @media (max-width: 850px) and (orientation: landscape) {
   .resumePages {
     flex-direction: row;
