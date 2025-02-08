@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // components
 import NavBar from './components/NavBar/NavBar'
-import About from './components/About/About'
-import ProfileCard from './components/ProfileCard/ProfileCard'
-import ProjectList from './components/ProjectList/ProjectList'
-import Resume from './components/Resume/Resume'
 
+// pages
 import Landing from './pages/Landing/Landing'
 import Docs from './pages/Docs/Docs'
 import Portfolio from './pages/Portfolio/Portfolio'
@@ -16,8 +13,6 @@ import Donations from './pages/Donations/Donations'
 
 // css
 import './App.css'
-
-// assets
 
 
 function App() {

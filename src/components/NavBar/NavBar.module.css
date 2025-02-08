@@ -1,12 +1,12 @@
 /* ============================= */
 /* Desktop Styles */
 /* ============================= */
-#nav-el {
+.navDesktop {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 170px;
+  height: 80px;
   width: 100%;
   margin: 0 auto;
   background: #2a2a2a57;
@@ -17,43 +17,37 @@
   z-index: 10;
   display: flex;
   justify-content: center;
-
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  align-self: flex-end;
-  height: 60%;
+  height: 100%;
   width: 100%;
   max-width: 1200px;
   font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #cfcfcf;
-  padding: 10px 0;
 }
 
 .icon {
-  gap: 20px;
-  height: 17px;
-  width: 17px;
+  height: 12px;
+  width: 12px;
 }
 
-.nav-item {
+.navItem {
   border-radius: 23px;
-  gap: 10px;
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 a {
-
   display: flex;
   gap: 10px;
-}
-
-a:visited {
-  color: #b4d6fd;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -61,22 +55,18 @@ a:hover {
   color: #b4d6fd;
 }
 
-.menu-button {
+.menuButton {
   display: none;
 }
-
-
-
 
 /* ============================= */
 /* Mobile Styles */
 /* ============================= */
 @media (max-width: 650px) {
-
-  .menu-button { 
+  .menuButton {
     display: block;
     position: fixed;
-    top: 20%; 
+    top: 20%;
     right: 20px;
     z-index: 1001;
     padding: 10px 14px 5px 14px;
@@ -92,15 +82,19 @@ a:hover {
     transition: transform 0.3s ease-in-out;
   }
 
-  .menu-button.active {
+  .menuButton.active {
     transform: rotate(-90deg);
     background: #d5d5d557;
   }
 
-  #nav-el {
+  .navMobile {
     position: fixed;
-    height: 100px;
+    top: 20%;
+    right: 4%;
+    width: 200px;
+    height: 30%;
     border-radius: 15px;
+    background: #8d8d8d57;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
     opacity: 0;
@@ -110,13 +104,14 @@ a:hover {
     z-index: 1000;
   }
 
-  #nav-el.expanded, #nav-el.expanded.detached {
+  .navMobile.expanded {
+    align-content: center;
     opacity: 1;
     transform: scale(1) translateY(0);
   }
 
   .nav {
-    
+    font-size: 1rem;
     padding: 30px;
     justify-content: center;
     flex-direction: column;
@@ -124,7 +119,7 @@ a:hover {
     gap: 20px;
   }
 
-  .nav-item {
+  .navItem {
     display: flex;
     justify-content: center;
     text-align: center;

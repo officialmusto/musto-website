@@ -1,5 +1,4 @@
 #resume {
-  scroll-margin-top: 240px;
   width: 90%;
   gap: 20px;
   display: flex;
@@ -12,10 +11,10 @@
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 26px;
   padding: 40px;
-  margin-bottom: 450px;
+  margin-bottom: 50px;
 }
 
-.resume-text-link {
+.resumeTextLink {
   
   align-items: flex-start;
   flex-direction: column;
@@ -23,7 +22,7 @@
   justify-content: space-around;
 }
 
-.download-link {
+.downloadLink {
   
   color: #8486ff;
   font-size: 1.4rem;
@@ -31,7 +30,7 @@
   z-index: 0;
 }
 
-.resume-pages {
+.resumePages {
   display: flex;
   
   align-items: center;
@@ -40,20 +39,20 @@
   align-self: center;
 }
 
-#resume-1, #resume-2 {
+#resume1, #resume2 {
   
   height: 250px;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 2.4%;
 }
 
-#resume-text {
+#resumeText {
   
   font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
   color: #eaeaea;
 }
 
-#resume-1:hover, #resume-2:hover {
+#resume1:hover, #resume2:hover {
   transform: scale(1.2);
   transition: transform 0.35s ease-in-out;
 }
@@ -65,7 +64,7 @@
     width: 90%;
   }
 
-  #resume-1, #resume-2 {
+  #resume1, #resume2 {
     margin: 20px;
     height: 250px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
@@ -81,7 +80,7 @@
 }
 @media (max-width: 550px) {
 
-  #resume-1, #resume-2 {
+  #resume1, #resume2 {
     margin: 20px;
     height: 250px;
     box-shadow: 0 8px 32px 0 #00000096;
@@ -89,17 +88,17 @@
     flex-direction: column;
   }
 
-  .resume-pages {
+  .resumePages {
     flex-direction: column;
   }
 
 }
 @media (max-width: 850px) and (orientation: landscape){
-  .resume-pages {
+  .resumePages {
     flex-direction: row;
   }
 
-  #resume-1, #resume-2 {
+  #resume1, #resume2 {
     height: 300px;
   }
 

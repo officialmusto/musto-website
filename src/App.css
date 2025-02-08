@@ -37,8 +37,13 @@
   100% { background-position: 100%; }
 }
 /* ---------------------------------------- */
-*, html {
 
+html {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+*, html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -47,18 +52,13 @@
   box-sizing: inherit;
 }
 
-/* Modern, sleek animated gradient background */
+
 body {
-  /* Diagonal gradient for a contemporary feel */
-  background: linear-gradient(135deg, #5555a2, #11193f, #1a1a36);
-  background-size: 200% 200%;
+  background: linear-gradient(135deg, #937ae1, #48236b, #301a36);
+  background-size: 100% 100%;
   animation: gradientAnimation 15s ease-in-out infinite;
-  
-  /* Ensure modern typography and contrast */
   font-family: 'Avenir Next', sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  color: #e5e5e5;
 }
 
 /* Smooth animated gradient movement */
@@ -110,41 +110,8 @@ body::before {
   object-fit: cover;
 }
 
-.all-el {
-  max-width: 1200px;
-  margin: 0 auto; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-and-about {
-  max-width: 1100px;
-  gap: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  display: flex;
-}
-
-
-.projects-and-resume {
-  display: flex;
-  align-self: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* ---------------------------------------- */
 
-@media (max-width: 1100px) {
 
-  .profile-and-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
 
 
