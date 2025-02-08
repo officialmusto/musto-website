@@ -13,7 +13,6 @@
   justify-content: center;
 }
 
-
 .profileAndAbout {
   margin: 50px;
   margin-top: 150px;
@@ -25,7 +24,6 @@
   align-content: center; /* Ensures both elements are aligned vertically */
 }
 
-
 .projectsAndResume {
   width: 90%;
   max-width: 1400px;
@@ -34,14 +32,12 @@
   align-items: center;
 }
 
-
 /* 
 ===========================
 ------- MOBILE VIEW ------
 ===========================
 */
 @media (max-width: 1110px) {
-
   .profileAndAbout {
     display: flex;
     width: 100%;
@@ -50,5 +46,4 @@
     align-items: center;
     margin-top: 100px;
   }
-
 }

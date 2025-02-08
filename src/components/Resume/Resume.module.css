@@ -17,7 +17,6 @@
 }
 
 .resumeTextLink {
-  
   align-items: flex-start;
   flex-direction: column;
   display: flex;
@@ -25,10 +24,9 @@
 }
 
 .downloadLink {
-  
   color: #8486ff;
   font-size: 1.4rem;
-  font-family: "avenir-next-bold", Arial, Helvetica, sans-serif;
+  font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   z-index: 0;
 }
 
@@ -41,8 +39,8 @@
   align-self: center;
 }
 
-#resume1, #resume2 {
-  
+#resume1,
+#resume2 {
   display: flex;
   flex-direction: row;
   height: 250px;
@@ -51,27 +49,26 @@
 }
 
 #resumeText {
-  
-  font-family: "avenir-next-light", Arial, Helvetica, sans-serif;
+  font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
   color: #eaeaea;
 }
 
-#resume1:hover, #resume2:hover {
+#resume1:hover,
+#resume2:hover {
   transform: scale(1.2);
   transition: transform 0.35s ease-in-out;
 }
 /* -------------------------- */
 
 @media (max-width: 1100px) {
-
   #resume {
     width: 90%;
-    
   }
 
-  #resume1, #resume2 {
+  #resume1,
+  #resume2 {
     margin: 20px;
-    
+
     height: 250px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
     border-radius: 2.4%;
@@ -82,11 +79,10 @@
   #resume {
     flex-direction: column;
   }
-  
 }
 @media (max-width: 660px) {
-
-  #resume1, #resume2 {
+  #resume1,
+  #resume2 {
     margin: 20px;
     height: 250px;
     box-shadow: 0 8px 32px 0 #00000096;
@@ -97,15 +93,14 @@
   .resumePages {
     flex-direction: column;
   }
-
 }
-@media (max-width: 850px) and (orientation: landscape){
+@media (max-width: 850px) and (orientation: landscape) {
   .resumePages {
     flex-direction: row;
   }
 
-  #resume1, #resume2 {
+  #resume1,
+  #resume2 {
     height: 300px;
   }
-
 }

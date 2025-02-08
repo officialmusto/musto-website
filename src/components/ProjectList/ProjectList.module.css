@@ -7,7 +7,6 @@
   grid-gap: 20px;
 }
 
-
 @media (max-width: 950px) {
   #portfolio {
     grid-template-columns: 1fr;
@@ -15,5 +14,4 @@
   #projectListText {
     font-size: 2.4rem;
   }
-
 }

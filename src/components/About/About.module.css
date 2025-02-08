@@ -1,24 +1,22 @@
-
 .aboutContent {
   display: flex;
   justify-content: center;
-  align-items: center; /* ✅ This centers vertically */
-  width: 100%; /* Ensures it takes the full width */
-  height: auto; /* Adjust based on content */
+  align-items: center;
+  width: 100%;
+  height: auto;
   background: #111111;
 }
 
-
-#home, .aboutBox {
+#home,
+.aboutBox {
   height: 100%;
   width: 100%;
 }
 
-
 .aboutBox {
   margin: 0 auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 750px;
   padding: 25px;
   display: flex;
   justify-content: center;
@@ -30,7 +28,6 @@
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 33px;
 }
-
 
 #aboutTitle {
   padding: 10px;
@@ -64,38 +61,31 @@ a:hover {
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #dedede;
-
 }
 
-
-
 @media (max-width: 1100px) {
-  .profileAndAbout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  #home,
+  .aboutBox {
+    width: 90%;
+    max-width: 900px;
   }
-
-  #home, .aboutBox {
-    width: 90%; /* Ensures they don't get too small or shift */
-    max-width: 500px; /* Keeps them looking good */
+  #aboutText {
+    padding: 10px;
+    font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    color: #dedede;
   }
 }
 @media (max-width: 850px) {
-  .profileAndAbout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  #home,
+  .aboutBox {
+    width: 90%;
+    max-width: 900px;
   }
-
-  #home, .aboutBox {
-    width: 90%; /* Ensures they don't get too small or shift */
-    max-width: 500px; /* Keeps them looking good */
+  #aboutText {
+    padding: 10px;
+    font-family: 'avenir-next-medium', Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #dedede;
   }
-
-  
 }

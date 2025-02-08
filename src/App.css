@@ -7,33 +7,32 @@ html,
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  max-width: 100vw; /* Prevents content from exceeding viewport width */
-  overflow-x: hidden; /* Stops horizontal scrolling */
+  max-width: 100vw;
+  overflow-x: hidden;
 }
-
 
 body {
   background: radial-gradient(
       ellipse at bottom,
-      rgba(150, 50, 150, 0.08) 5%, /* Muted, softer purple instead of harsh pink */
-      rgba(0, 0, 0, 0.95) 60%
+      rgba(150, 50, 150, 0.08) 5%,
+      /* Muted, softer purple instead of harsh pink */ #000000f2 60%
     ),
-    linear-gradient(to top, rgba(100, 0, 150, 0.08) 10%, transparent 30%),
-    linear-gradient(to top, rgba(80, 0, 150, 0.07) 20%, transparent 50%),
-    linear-gradient(to top, rgba(60, 0, 150, 0.05) 30%, transparent 70%);
+    linear-gradient(to top, #64009614 10%, transparent 30%),
+    linear-gradient(to top, #50009612 20%, transparent 50%),
+    linear-gradient(to top, #3c00960d 30%, transparent 70%);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;  /* ✅ This makes the background stay fixed */
+  background-attachment: fixed;
 
   font-family: 'Avenir Next', sans-serif;
   color: #e5e5e5;
 }
 
-/* ⚡ Keep Light Rays Fixed */
 .light-rays {
-  position: fixed;  /* ✅ Keeps the light rays locked even when scrolling */
+  position: fixed;
   bottom: 0;
   left: 50%;
   width: 100vw;
@@ -48,9 +47,8 @@ body {
   transform-origin: bottom;
   animation: shootingLight 5s infinite alternate ease-in-out;
   pointer-events: none;
-  z-index: -1; /* Keeps it behind content */
+  z-index: -1;
 }
-
 
 body::before {
   content: '';
