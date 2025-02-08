@@ -7,6 +7,46 @@ html,
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "avenir-next-bold";
+  src: url(fonts/avenirNext-bold-webfont.woff) format("woff");
+  src: url(fonts/avenirNext-bold-webfont.woff2) format("woff2");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "avenir-next-light";
+  src: url(fonts/avenirNext-light-webfont.woff) format("woff");
+  src: url(fonts/avenirNext-light-webfont.woff2) format("woff2");
+  font-weight: light;
+  font-style: light;
+}
+@font-face {
+  font-family: "avenir-next-regular";
+  src: url(fonts/avenirNext-regular-webfont.woff) format("woff");
+  src: url(fonts/avenirNext-regular-webfont.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir-next-bolder";
+  src: url(fonts/avenirNext-heavy-webfont.woff) format("woff");
+  src: url(fonts/avenirNext-heavy-webfont.woff2) format("woff2");
+  font-weight: bolder;
+  font-style: bolder;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 100%; }
+  50% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+@-webkit-keyframes gradientAnimation {
+  0% { background-position: 100%; }
+  50% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+/* ---------------------------------------- */
+
 html,
 body {
   width: 100%;
@@ -17,8 +57,8 @@ body {
 body {
   background: radial-gradient(
       ellipse at bottom,
-      rgba(150, 50, 150, 0.08) 5%,
-      /* Muted, softer purple instead of harsh pink */ #000000f2 60%
+      #96329614 5%,
+      #000000f2 60%
     ),
     linear-gradient(to top, #64009614 10%, transparent 30%),
     linear-gradient(to top, #50009612 20%, transparent 50%),
