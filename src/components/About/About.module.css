@@ -2,17 +2,23 @@
 .aboutContent {
   display: flex;
   justify-content: center;
+  align-items: center; /* ✅ This centers vertically */
+  width: 100%; /* Ensures it takes the full width */
+  height: auto; /* Adjust based on content */
   background: #111111;
 }
 
+
 #home, .aboutBox {
   height: 100%;
-
+  width: 100%;
 }
 
 
 .aboutBox {
-  width: 60%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
   padding: 25px;
   display: flex;
   justify-content: center;
@@ -24,6 +30,7 @@
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 33px;
 }
+
 
 #aboutTitle {
   padding: 10px;
@@ -60,16 +67,35 @@ a:hover {
 
 }
 
-@media (max-width: 850px) {
-  #aboutText {
-    padding: 3%;
-    font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    color: #dedede;
+
+
+@media (max-width: 1100px) {
+  .profileAndAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   #home, .aboutBox {
-    max-width: 1200px;
-    min-width: 600px;
+    width: 90%; /* Ensures they don't get too small or shift */
+    max-width: 500px; /* Keeps them looking good */
   }
+}
+@media (max-width: 850px) {
+  .profileAndAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #home, .aboutBox {
+    width: 90%; /* Ensures they don't get too small or shift */
+    max-width: 500px; /* Keeps them looking good */
+  }
+
+  
 }

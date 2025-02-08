@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   align-self: center;
   background: #111111;
   backdrop-filter: blur(10px);
@@ -33,7 +34,7 @@
 
 .resumePages {
   display: flex;
-  
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -41,7 +42,9 @@
 }
 
 #resume1, #resume2 {
+  
   display: flex;
+  flex-direction: row;
   height: 250px;
   box-shadow: 0 8px 32px 0 #00000096;
   border-radius: 2.4%;
@@ -63,10 +66,12 @@
 
   #resume {
     width: 90%;
+    
   }
 
   #resume1, #resume2 {
     margin: 20px;
+    
     height: 250px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.59);
     border-radius: 2.4%;
@@ -79,7 +84,7 @@
   }
   
 }
-@media (max-width: 550px) {
+@media (max-width: 660px) {
 
   #resume1, #resume2 {
     margin: 20px;

@@ -16,7 +16,7 @@ function Resume() {
             Download
           </a>
         </div>
-        <div className={styles.resumepges}>
+        <div className={styles.resumePages}>
           <img
             id={styles.resume1}
             src={resumeP1}
