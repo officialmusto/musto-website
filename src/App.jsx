@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar'
 import Landing from './pages/Landing/Landing'
 import Docs from './pages/Docs/Docs'
 import Portfolio from './pages/Portfolio/Portfolio'
-import MyProducts from './pages/MyProducts/MyProducts'
+import Projects from './pages/Projects/Projects'
 import Donations from './pages/Donations/Donations'
 
 // css
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/docs" element={<Docs />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/widgets" element={<MyProducts />} />
+        <Route path="/downloads" element={<Projects />} />
         <Route path="/donate" element={<Donations />} />
       </Routes>
     </>

@@ -67,30 +67,26 @@ function NavBar() {
           <nav className={styles.nav}>
             <div className={styles.navItem}>
               <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="Home" /> home
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/widgets">
-                <img src={downloadsIcon} className={styles.icon} alt="Downloads" />{' '}
-                widgets
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/docs">
-                <img src={docsIcon} className={styles.icon} alt="Docs" /> docs
+                <img src={homeIcon} className={styles.icon} alt="home" />
+                home
               </Link>
             </div>
             <div className={styles.navItem}>
               <Link to="/portfolio">
                 <img src={portIcon} className={styles.icon} alt="Portfolio" />{' '}
-                community
+                portfolio
               </Link>
             </div>
             <div className={styles.navItem}>
-              <Link to="/donate">
-                <img src={donoIcon} className={styles.icon} alt="Donations" />{' '}
-                donations
+              <Link to="/downloads">
+                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
+                downloads
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link to="/docs">
+                <img src={docsIcon} className={styles.icon} alt="Docs" /> 
+                docs
               </Link>
             </div>
           </nav>
@@ -100,24 +96,26 @@ function NavBar() {
           <nav className={styles.nav}>
             <div className={styles.navItem}>
               <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="Home" /> home
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/widgets">
-                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
-                downloads
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/docs">
-                <img src={docsIcon} className={styles.icon} alt="Docs" /> docs
+                <img src={homeIcon} className={styles.icon} alt="Home" /> 
+                home
               </Link>
             </div>
             <div className={styles.navItem}>
               <Link to="/portfolio">
                 <img src={portIcon} className={styles.icon} alt="Portfolio" />{' '}
                 portfolio
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link to="/downloads">
+                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
+                downloads
+              </Link>
+            </div>
+            <div className={styles.navItem}>
+              <Link to="/docs">
+                <img src={docsIcon} className={styles.icon} alt="Docs" /> 
+                docs
               </Link>
             </div>
           </nav>
