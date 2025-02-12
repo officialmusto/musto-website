@@ -5,7 +5,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 // Assets
 import homeIcon from '../../assets/icons/home.png'
-import widgetsIcon from '../../assets/icons/switch.png'
+import downloadsIcon from '../../assets/icons/downloads.png'
 import docsIcon from '../../assets/icons/docs.png'
 import portIcon from '../../assets/icons/portfolio.png'
 import donoIcon from '../../assets/icons/dono.png'
@@ -66,19 +66,19 @@ function NavBar() {
         >
           <nav className={styles.nav}>
             <div className={styles.navItem}>
+              <Link to="/">
+                <img src={homeIcon} className={styles.icon} alt="Home" /> home
+              </Link>
+            </div>
+            <div className={styles.navItem}>
               <Link to="/widgets">
-                <img src={widgetsIcon} className={styles.icon} alt="Widgets" />{' '}
+                <img src={downloadsIcon} className={styles.icon} alt="Downloads" />{' '}
                 widgets
               </Link>
             </div>
             <div className={styles.navItem}>
               <Link to="/docs">
                 <img src={docsIcon} className={styles.icon} alt="Docs" /> docs
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="Home" /> home
               </Link>
             </div>
             <div className={styles.navItem}>
@@ -99,9 +99,14 @@ function NavBar() {
         <div className={styles.navDesktop}>
           <nav className={styles.nav}>
             <div className={styles.navItem}>
+              <Link to="/">
+                <img src={homeIcon} className={styles.icon} alt="Home" /> home
+              </Link>
+            </div>
+            <div className={styles.navItem}>
               <Link to="/widgets">
-                <img src={widgetsIcon} className={styles.icon} alt="Widgets" />{' '}
-                widgets
+                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
+                downloads
               </Link>
             </div>
             <div className={styles.navItem}>
@@ -110,20 +115,9 @@ function NavBar() {
               </Link>
             </div>
             <div className={styles.navItem}>
-              <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="Home" /> home
-              </Link>
-            </div>
-            <div className={styles.navItem}>
               <Link to="/portfolio">
                 <img src={portIcon} className={styles.icon} alt="Portfolio" />{' '}
                 portfolio
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/donate">
-                <img src={donoIcon} className={styles.icon} alt="Donations" />{' '}
-                donations
               </Link>
             </div>
           </nav>
