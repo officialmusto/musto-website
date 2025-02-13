@@ -73,7 +73,7 @@ function NavBar() {
             </div>
             <div className={styles.navItem}>
               <Link to="/portfolio">
-                <img src={portIcon} className={styles.icon} alt="Portfolio" />{' '}
+                <img src={portIcon} className={styles.icon} alt="portfolio" />{' '}
                 portfolio
               </Link>
             </div>
@@ -85,7 +85,7 @@ function NavBar() {
             </div>
             <div className={styles.navItem}>
               <Link to="/docs">
-                <img src={docsIcon} className={styles.icon} alt="Docs" /> 
+                <img src={docsIcon} className={styles.icon} alt="docs" /> 
                 docs
               </Link>
             </div>
@@ -96,13 +96,13 @@ function NavBar() {
           <nav className={styles.nav}>
             <div className={styles.navItem}>
               <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="Home" /> 
+                <img src={homeIcon} className={styles.icon} alt="home" /> 
                 home
               </Link>
             </div>
             <div className={styles.navItem}>
               <Link to="/portfolio">
-                <img src={portIcon} className={styles.icon} alt="Portfolio" />{' '}
+                <img src={portIcon} className={styles.icon} alt="portfolio" />{' '}
                 portfolio
               </Link>
             </div>

@@ -1,7 +1,13 @@
 import React from 'react'
 
+/*
+===== STYLES =====
+*/
+import styles from './Docs.module.css'
+
+
 const Docs = () => {
-  return <div>My Documents</div>
+  return <div className={styles.title}>My Documents</div>
 }
 
 export default Docs

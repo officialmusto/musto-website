@@ -20,9 +20,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/docs" element={<Docs />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/downloads" element={<Projects />} />
+        <Route path="/docs" element={<Docs />} />
         <Route path="/donate" element={<Donations />} />
       </Routes>
     </>

@@ -1,7 +1,12 @@
 import React from 'react'
 
-const MyWidgets = () => {
-  return <div>My Widgets</div>
+/*
+===== STYLES =====
+*/
+import styles from './Projects.module.css'
+
+const Projects = () => {
+  return <div className={styles.title}>Musto's Widgets</div>
 }
 
-export default MyWidgets
+export default Projects

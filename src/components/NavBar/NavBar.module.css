@@ -63,25 +63,6 @@ a:hover {
 /* Mobile Styles */
 /* ============================= */
 @media (max-width: 650px) {
-  .menuButton {
-    display: block;
-    position: fixed;
-    top: 20%;
-    right: 20px;
-    z-index: 1001;
-    padding: 10px 14px 5px 14px;
-    font-size: 32px;
-    background: #2a2a2a57;
-    border: solid 1px #b2b2b231;
-    border-radius: 10px;
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17px);
-    box-shadow: 0 8px 32px 10px #0000007e;
-    color: rgb(217, 217, 217);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-
   .menuButton.active {
     transform: rotate(-90deg);
     background: #d5d5d557;
