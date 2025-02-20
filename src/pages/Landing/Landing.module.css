@@ -2,7 +2,8 @@
 .title {
   height: 20vh;
   font-size: 3.7rem;
-  font-weight: 900;
+  font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
+  color: #c9c9c9;
 }
 
 .container {

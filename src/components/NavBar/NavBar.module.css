@@ -17,6 +17,7 @@
   z-index: 10;
   display: flex;
   justify-content: center;
+  transition: all 0.1s ease-in-out;
 }
 
 .nav {
@@ -45,9 +46,9 @@
 
 a {
   display: flex;
+  align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: inherit;
 }
 
 a:hover {
@@ -55,70 +56,90 @@ a:hover {
   color: #b4d6fd;
 }
 
-.menuButton {
-  display: none;
+/* ============================= */
+/* Hamburger & Mobile Menu */
+/* ============================= */
+
+/* Hamburger icon container */
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  right: -40%;
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Hamburger bars */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #cfcfcf;
+  transition: all 0.3s ease;
+}
+
+/* When menu is open, transform the bars to form an "X" */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu overlay */
+.mobileMenu {
+  position: fixed;
+  right: 7.5%;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 40%;
+  width: 60%;
+  font-size: 1.7rem;
+  font-family: 'Avenir-Next-Bolder';
+  background: #16161657;
+  border: solid 1px #b2b2b231;
+  border-radius: 25px;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  box-shadow: 0 8px 32px 10px #0000007e;
+  padding: 20px;
+  z-index: 20;
+}
+
+.mobileMenu a {
+  margin: 10px 0;
 }
 
 /* ============================= */
 /* Mobile Styles */
 /* ============================= */
 @media (max-width: 650px) {
-  .menuButton {
-    display: block;
-    position: fixed;
-    top: 20%;
-    right: 20px;
-    z-index: 1001;
-    padding: 10px 14px 5px 14px;
-    font-size: 32px;
-    background: #2a2a2a57;
-    border: solid 1px #b2b2b231;
-    border-radius: 10px;
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17px);
-    box-shadow: 0 8px 32px 10px #0000007e;
-    color: #d9d9d9;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .menuButton.active {
-    transform: rotate(-90deg);
-    background: #d5d5d557;
-  }
-
-  .navMobile {
-    position: fixed;
-    top: 20%;
-    right: 4%;
-    width: 200px;
-    height: 30%;
-    border-radius: 15px;
-    background: #30303031;
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17px);
-    opacity: 0;
-    transform: scale(0) translateY(20px);
-    transform-origin: top right;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 1000;
-  }
-
-  .navMobile.expanded {
-    justify-content: flex-start;
-    opacity: 1;
-    transform: scale(1) translateY(0);
+  .navDesktop {
+    height: 60px;
+    padding: 0 10px;
   }
 
   .nav {
-
-    padding: 20px;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .navItem {
+    display: none;
+  }
+
+  .hamburger {
     display: flex;
-    text-align: center;
   }
 }

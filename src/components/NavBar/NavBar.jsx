@@ -1,125 +1,143 @@
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useState, useEffect, useRef } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { motion, useAnimation } from 'framer-motion'
+import styles from './NavBar.module.css'
 
-// Assets
+// Dummy assets – replace these with your actual icon paths
 import homeIcon from '../../assets/icons/home.png'
 import downloadsIcon from '../../assets/icons/downloads.png'
 import docsIcon from '../../assets/icons/docs.png'
 import portIcon from '../../assets/icons/portfolio.png'
-import donoIcon from '../../assets/icons/dono.png'
-
-// CSS
-import styles from './NavBar.module.css'
 
 function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 650)
-  const menuRef = useRef(null)
-  const menuButtonRef = useRef(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const controls = useAnimation()
 
   useEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       setIsMobile(window.innerWidth <= 650)
+      if (window.innerWidth > 650) {
+        setIsMenuOpen(false)
+      }
     }
+
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        menuButtonRef.current &&
-        !menuButtonRef.current.contains(event.target)
-      ) {
-        setMenuOpen(false)
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        controls.start({
+          borderRadius: '22px',
+          top: '10px',
+          width: '85%',
+          transition: { type: 'spring', stiffness: 150, damping: 7 },
+        })
+      } else {
+        controls.start({
+          width: '100%',
+          borderRadius: '0px',
+          top: '0px',
+          left: '0px',
+          right: '0px',
+          transition: { type: 'spring', stiffness: 150, damping: 7 },
+        })
       }
     }
-    if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [menuOpen])
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [controls])
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev)
+  }
 
   return (
     <>
-      <button
-        ref={menuButtonRef}
-        className={`${styles.menuButton} ${menuOpen ? styles.active : ''}`}
-        onClick={() => setMenuOpen(!menuOpen)}
+      <motion.div
+        className={styles.navDesktop}
+        animate={controls}
+        initial={{
+          borderRadius: '0px',
+          top: '0px',
+          left: '0px',
+          right: '0px',
+        }}
       >
-        <FontAwesomeIcon
-          icon={menuOpen ? faTimes : faBars}
-          className={styles.menuIcon}
-        />
-      </button>
+        <nav className={styles.nav}>
+          {/* Desktop Navigation Items */}
+          {!isMobile && (
+            <>
+              <div className={styles.navItem}>
+                <Link to="/">
+                  <img src={homeIcon} className={styles.icon} alt="home" />
+                  Home
+                </Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link to="/portfolio">
+                  <img src={portIcon} className={styles.icon} alt="portfolio" />
+                  Portfolio
+                </Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link to="/downloads">
+                  <img
+                    src={downloadsIcon}
+                    className={styles.icon}
+                    alt="downloads"
+                  />
+                  Downloads
+                </Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link to="/docs">
+                  <img src={docsIcon} className={styles.icon} alt="docs" />
+                  Docs
+                </Link>
+              </div>
+            </>
+          )}
 
-      {isMobile ? (
-        <div
-          ref={menuRef}
-          className={`${styles.navMobile} ${menuOpen ? styles.expanded : ''}`}
+          {/* Mobile Hamburger Icon */}
+          {isMobile && (
+            <div
+              className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`}
+              onClick={toggleMenu}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          )}
+        </nav>
+      </motion.div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobile && isMenuOpen && (
+        <motion.div
+          className={styles.mobileMenu}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <nav className={styles.nav}>
-            <div className={styles.navItem}>
-              <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="home" />
-                home
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/portfolio">
-                <img src={portIcon} className={styles.icon} alt="portfolio" />{' '}
-                portfolio
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/downloads">
-                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
-                downloads
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/docs">
-                <img src={docsIcon} className={styles.icon} alt="docs" /> 
-                docs
-              </Link>
-            </div>
-          </nav>
-        </div>
-      ) : (
-        <div className={styles.navDesktop}>
-          <nav className={styles.nav}>
-            <div className={styles.navItem}>
-              <Link to="/">
-                <img src={homeIcon} className={styles.icon} alt="home" /> 
-                home
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/portfolio">
-                <img src={portIcon} className={styles.icon} alt="portfolio" />{' '}
-                portfolio
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/downloads">
-                <img src={downloadsIcon} className={styles.icon} alt="downloads" />{' '}
-                downloads
-              </Link>
-            </div>
-            <div className={styles.navItem}>
-              <Link to="/docs">
-                <img src={docsIcon} className={styles.icon} alt="Docs" /> 
-                docs
-              </Link>
-            </div>
-          </nav>
-        </div>
+          <Link to="/" onClick={toggleMenu}>
+            Home
+          </Link>
+          <Link to="/portfolio" onClick={toggleMenu}>
+            Portfolio
+          </Link>
+          <Link to="/downloads" onClick={toggleMenu}>
+            Downloads
+          </Link>
+          <Link to="/docs" onClick={toggleMenu}>
+            Docs
+          </Link>
+        </motion.div>
       )}
     </>
   )
