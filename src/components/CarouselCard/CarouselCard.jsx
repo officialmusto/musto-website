@@ -18,7 +18,10 @@ import styles from './CarouselCard.module.css'
 
 const CarouselCard = () => {
   
+
   const [index, setIndex] = useState(0)
+
+  // array of image objects containing img key with value of favicon variable.
   const slides = [
     { img: favicon0 },
     { img: favicon1 },
@@ -35,11 +38,13 @@ const CarouselCard = () => {
 
   return (
     <div className={styles.carousel}>
-      <button className={styles.carouselButtons} onClick={handlePrevious}>Previous</button>
       <a className={styles.carouselImg} href={slides[index].url} target="_blank" rel="noopener noreferrer">
         <img src={slides[index].img} alt={`Slide ${index + 1}`} className={styles.image} />
       </a>
-      <button className={styles.carouselButtons} onClick={handleNext}>Next</button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.carouselButtons} onClick={handlePrevious}>Previous</button>
+        <button className={styles.carouselButtons} onClick={handleNext}>Next</button>
+      </div>
     </div>
   )
 }

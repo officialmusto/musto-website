@@ -4,6 +4,7 @@ import React from 'react'
 ===== COMPONENTS =====
 */
 import CarouselCard from '../../components/CarouselCard/CarouselCard'
+import Footer from '../../components/Footer/Footer'
 
 /*
 ===== ASSETS =====
@@ -22,9 +23,10 @@ const Landing = () => {
     <>
     <div className={styles.container}>
       <div className={styles.title}>
-        Home Page
+        Musto's Website
       </div>
-        <CarouselCard/>
+        <CarouselCard />
+        <Footer />
     </div>
     </>
   )

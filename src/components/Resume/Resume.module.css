@@ -24,7 +24,7 @@
 }
 
 .downloadLink {
-  color: #8486ff;
+  color: #559bd1;
   font-size: 2.4rem;
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   z-index: 0;
@@ -64,7 +64,7 @@
 
 @media (max-width: 1100px) {
   #resume {
-    width: 90%;
+    width: 100%;
   }
 
   #resume1,
