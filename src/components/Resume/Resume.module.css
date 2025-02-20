@@ -25,7 +25,7 @@
 
 .downloadLink {
   color: #8486ff;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
   z-index: 0;
 }
@@ -49,6 +49,8 @@
 }
 
 #resumeText {
+  padding: .5em;
+  font-size: 3rem;
   font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
   color: #eaeaea;
 }
