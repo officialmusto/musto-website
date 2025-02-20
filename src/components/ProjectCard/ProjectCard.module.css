@@ -36,7 +36,7 @@
 #title {
   padding: 10px;
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
-  font-size: 160%;
+  font-size: 3rem;
   text-align: center;
   color: #e2e2e2;
 }
@@ -46,7 +46,7 @@
   height: 100%;
   width: 100%;
   font-family: 'avenir-next-bold', Arial, Helvetica;
-  font-size: 80%;
+  font-size: 1.6rem;
   color: #e2e2e2;
   text-align: center;
   display: flex;

@@ -15,7 +15,7 @@
 
 #nameText {
   font-family: 'avenir-next-bold', Arial, Helvetica, sans-serif;
-  font-size: 160%;
+  font-size: 3rem;
   text-align: center;
   color: #e2e2e2;
 }
@@ -35,7 +35,7 @@
   padding: 0px;
   letter-spacing: 2px;
   font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #eaeaea;
 }
 
@@ -51,7 +51,7 @@
   justify-content: space-around;
   flex-direction: row;
   font-family: 'avenir-next-light', Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #e2e2e2;
   gap: 30px;
 }
@@ -61,7 +61,7 @@
 #linkedInLink {
   gap: 11px;
   padding: 5px;
-  font-size: small;
+  font-size: 1.2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
