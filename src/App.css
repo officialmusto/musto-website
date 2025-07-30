@@ -44,7 +44,7 @@ html {
 
 body {
   
-  background-color: #181818;
+  background-color: #28436e;
   font-family: 'Avenir Next', sans-serif;
   color: #e5e5e5;
 }
@@ -54,7 +54,7 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #181818;
+  background-color: #28436e;
   pointer-events: none;
   z-index: -2;
 }

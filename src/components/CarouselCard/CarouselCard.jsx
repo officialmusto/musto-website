@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 /*
 ===== ASSETS =====
@@ -51,6 +51,7 @@ const CarouselCard = () => {
           className={styles.carouselTrack}
           style={{
             transform: `translateX(-${index * (100 / slides.length)}%)`,
+            width: `${slides.length * 100}%`,
           }}
         >
           {slides.map((slide, i) => (

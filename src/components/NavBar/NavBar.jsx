@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, useAnimation } from 'framer-motion'
 import styles from './NavBar.module.css'
 
-// Dummy assets – replace these with your actual icon paths
+
 import homeIcon from '../../assets/icons/home.png'
 import downloadsIcon from '../../assets/icons/downloads.png'
 import docsIcon from '../../assets/icons/docs.png'
