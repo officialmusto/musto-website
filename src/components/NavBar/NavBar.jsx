@@ -19,8 +19,7 @@ function NavBar() {
       setIsMobile(window.innerWidth <= 650)
       if (window.innerWidth > 650) {
         setIsMenuOpen(false)
-      }
-    }
+      }    }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
